@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+<html>
+<title>Trabajo Reglas de Asociacion</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.load('current', {packages:['wordtree']});
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        var data2 = new google.visualization.DataTable();
+        data2.addColumn('string', 'Name');
+        data2.addColumn('string', 'Manager');
+        data2.addColumn('string', 'ToolTip');
+
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+        [{v:'INTERBLOQUES', f:'INTERBLOQUES MAYORITARIOS<div style="color:#2196F3; font-style:italic"> (246) </div>'},'', 'Diputados:246'],
+
+        [{v:'CAMBIEMOS', f:'CAMBIEMOS<div style="color:#2196F3; font-style:italic">(108)</div>'},'INTERBLOQUES', 'Diputados:108'],
+
+        [{v:'FRENTE PARA LA VICTORIA-PJ', f:'FRENTE PARA LA VICTORIA-PJ<div style="color:#2196F3; font-style:italic">(65)</div>'},'INTERBLOQUES', 'Diputados:65'],
+
+        [{v:'ARGENTINA FEDERAL ', f:'ARGENTINA FEDERAL <div style="color:#2196F3; font-style:italic">(33)</div>'},
+         'INTERBLOQUES', 'Diputados:33'],
+
+
+        [{v:'FRENTE RENOVADOR UNA ', f:'FRENTE RENOVADOR UNA <div style="color:#2196F3; font-style:italic">(21)</div>'}, 'INTERBLOQUES', 'Diputados:21'],
+
+        [{v:'FRENTE CÍVICO POR SANTIAGO ', f:'FRENTE CÍVICO POR SANTIAGO <div style="color:#2196F3; font-style:italic">(6)</div>'},
+         'INTERBLOQUES', 'Diputados:6'],
+
+        [{v:'EN MARCHA ', f:'EN MARCHA <div style="color:#2196F3; font-style:italic">(5)</div>'},
+         'INTERBLOQUES', 'Diputados:5'],
+
+        [{v:'UNIDAD JUSTICIALISTA', f:'UNIDAD JUSTICIALISTA<div style="color:#2196F3; font-style:italic">(4)</div>'},'INTERBLOQUES', 'Diputados:4'],
+
+        [{v:'EVOLUCIÓN RADICAL ', f:'EVOLUCIÓN RADICAL <div style="color:#2196F3; font-style:italic">(3)</div>'}, 'INTERBLOQUES', 'Diputados:3'],
+      ]);
+
+        data2.addRows([
+        [{v:'INTERBLOQUES', f:'INTERBLOQUES MINORITARIOS<div style="color:#2196F3; font-style:italic"> (11) </div>'},'', 'Diputados:11'],
+
+        [{v:'PTS', f:'PTS <div style="color:#2196F3; font-style:italic">(2)</div>'}, 'INTERBLOQUES', 'Diputados:2'],
+
+
+        [{v:'ELIJO CATAMARCA ', f:'ELIJO CATAMARCA <div style="color:#2196F3; font-style:italic">(2)</div>'}, 'INTERBLOQUES', 'Diputados:2'],
+
+        [{v:'FRENTE PROGRESISTA CIVICO Y SOCIAL  ', f:'FRENTE PROGRESISTA CIVICO Y SOCIAL  <div style="color:#2196F3; font-style:italic">(1)</div>'}, 'INTERBLOQUES', 'Diputados:1'],
+
+        [{v:'FIT ', f:'FIT <div style="color:#2196F3; font-style:italic">(1)</div>'}, 'INTERBLOQUES', 'Diputados:1'],
+
+        [{v:'MOVIMIENTO POPULAR NEUQUINO', f:'MOVIMIENTO POPULAR NEUQUINO <div style="color:#2196F3; font-style:italic">(1)</div>'}, 'INTERBLOQUES', 'Diputados:1'],
+
+        [{v:'NUEVO ESPACIO SANTAFESINO', f:'NUEVO ESPACIO SANTAFESINO <div style="color:#2196F3; font-style:italic">(1)</div>'}, 'INTERBLOQUES', 'Diputados:1'],
+        
+        [{v:'PRIMERO ARGENTINA', f:'PRIMERO ARGENTINA <div style="color:#2196F3; font-style:italic">(1)</div>'}, 'INTERBLOQUES', 'Diputados:1'],
+        
+        [{v:'PROTECTORA', f:'PROTECTORA <div style="color:#2196F3; font-style:italic">(1)</div>'}, 'INTERBLOQUES', 'Diputados:1'],
+
+        [{v:'SOMOS MENDOZA', f:'SOMOS MENDOZA <div style="color:#2196F3; font-style:italic">(1)</div>'}, 'INTERBLOQUES', 'Diputados:1']
+      ]);
+
+        // Create the chart.
+      var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+      var chart2 = new google.visualization.OrgChart(document.getElementById('chart_div2'));
+      // Draw the chart, setting the allowHtml option to true for the tooltips.
+      chart.draw(data, {allowHtml:true});
+      chart2.draw(data2, {allowHtml:true});
+
+      // Grafico de torta de los bloques
+      var cambiemosData = google.visualization.arrayToDataTable([
+          ['Bloque', 'Cantidad de Diputados'],
+          ['PRO', 55],
+          ['PARTIDO POR LA JUSTICIA SOCIAL', 1],
+          ['FTE. CÍV. Y SOC. DE CATAMARCA', 1],
+          ['SALTA SOMOS TODOS', 1],
+          ['UCR', 40],
+          ['COALICIÓN CÍVICA', 10]
+        ]);
+
+        var cambiemosOpciones = {
+          title: 'Interbloque Cambiemos',
+          legend: 'Distribucion de los Diputados',
+          pieSliceText: 'label',
+          slices: { 1: {offset: 0.2},
+                    2: {offset: 0.3},
+                    3: {offset: 0.4},
+          },
+        };
+
+        var cambiemosChart = new google.visualization.PieChart(document.getElementById('cambiemos_piechart'));
+        cambiemosChart.draw(cambiemosData, cambiemosOpciones);
+      
+
+      var fpvData = google.visualization.arrayToDataTable([
+          ['Bloque', 'Cantidad de Diputados'],
+          ['FPV–PJ', 64],
+          ['CONCERTACION FORJA', 1]
+        ]);
+
+        var fpvOpciones = {
+          title: 'Interbloque Frente Para la Victoria - PJ',
+          legend: 'Distribucion de los Diputados',
+          pieSliceText: 'label',
+          slices: { 1: {offset: 0.1}
+          },
+        };
+
+        var fpvChart = new google.visualization.PieChart(document.getElementById('fpv_piechart'));
+        fpvChart.draw(fpvData, fpvOpciones);
+
+
+      var argfederalData = google.visualization.arrayToDataTable([
+          ['Bloque', 'Cantidad de Diputados'],
+          ['JUSTICIALISTA', 18],
+          ['SOMOS SAN JUAN', 1],
+          ['TODOS JUNTOS POR SAN JUAN', 1],
+          ['PARTIDO BLOQUISTA DE SAN JUAN', 1],
+          ['JUSTICIALISTA POR TUCUMÁN', 3],
+          ['FRENTE DE LA CONCORDIA MISIONERO', 5],
+          ['CÓRDOBA FEDERAL', 4]
+        ]);
+
+        var argfederalOpciones = {
+          title: 'Interbloque Argentina Federal',
+          legend: 'Distribucion de los Diputados',
+          pieSliceText: 'label',
+          slices: { 1: {offset: 0.2},
+                    2: {offset: 0.3},
+                    3: {offset: 0.4},
+          },
+        };
+
+        var argfederalChart = new google.visualization.PieChart(document.getElementById('argfederal_piechart'));
+        argfederalChart.draw(argfederalData, argfederalOpciones);
+
+
+      var fruData = google.visualization.arrayToDataTable([
+          ['Bloque', 'Cantidad de Diputados'],
+          ['FED. UNIDOS POR UNA NVA. ARGENTINA', 18],
+          ['CULTURA, EDUCACIÓN Y TRABAJO', 1],
+          ['CÓRDOBA TRABAJO Y PRODUCCIÓN', 1],
+          ['TRABAJO Y DIGNIDAD', 1]
+        ]);
+
+        var fruOpciones = {
+          title: 'Interbloque Frente Renovador UNA',
+          legend: 'Distribucion de los Diputados',
+          pieSliceText: 'label',
+          slices: { 1: {offset: 0.1},
+                    2: {offset: 0.2},
+                    3: {offset: 0.2},
+          },
+        };
+
+        var fruChart = new google.visualization.PieChart(document.getElementById('fru_piechart'));
+        fruChart.draw(fruData, fruOpciones);
+
+
+      // Tabla de partidos por provincia
+        var tablaProvincias = new google.visualization.DataTable();
+        tablaProvincias.addColumn('string', 'Provincia');
+        tablaProvincias.addColumn('string', 'Partido');
+        tablaProvincias.addColumn('string', 'Cantidad de Diputados');
+        tablaProvincias.addRows([
+          ['Buenos Aires', 'Frente para la Victoria' , '25'],
+          ['', 'PRO', '18' ],
+          ['', 'Federal Unidos por una Nueva Argentina', '12'],
+          ['', 'Union Civica Radical' , '6'],
+          ['', 'Justicialista', '3'],
+          ['', 'Coalicion Civica', '3'],
+          ['', 'PTS' , '2'],
+          ['', 'Peronismo para la Victoria', '1'],
+          ['', 'Fte. de Izquierda y de los Trabajadores', '1'],
+          ['Total', '','70' ],
+          ['C.A.B.A.', 'PRO' , '10'],
+          ['', 'Frente para la Victoria - PJ', '6'],
+          ['', 'Coalicion Civica', '3'],
+          ['', 'Federal Unidos por una Nueva Argentina' , '2'],
+          ['', 'Evolucion Radical', '2'],
+          ['', 'Union Civica Radical', '1'],
+          ['', 'Libres del Sur' , '1'],
+          ['Total', '','25' ],
+          ['Catamarca', 'Elijo Catamarca', '2'],
+          ['', 'Fte. Civico y Social de Catamarca','1' ],
+          ['', 'Coalicion Civica','1' ],
+          ['', 'Frente para la Victoria - PJ','1' ],
+          ['Total', '','5' ],
+          ['Chaco', 'Frente para la Victoria - PJ','2' ],
+          ['', 'Justicialista','2' ],
+          ['', 'Union Civica Radical','2' ],
+          ['', 'Coalicion Civica','1' ],
+          ['Total', '','7' ],
+          ['Chubut', 'Frente para la Victoria - PJ','2' ],
+          ['', 'Trabajo y Dignidad','1' ],
+          ['', 'Cultura, Educacion y Trabajo','1' ],
+          ['', 'Union Civica Radical','1' ],
+          ['Total', '','5' ],
+          ['Córdoba', 'Union Civica Radical','5' ],
+          ['', 'PRO','4' ],
+          ['','Frente para la Victoria - PJ','2'],
+          ['','Coalicion Civica','1'],
+          ['','Cordoba Trabajo y Produccion','1'],
+          ['','Concertacion FORJA','1'],
+          ['Total', '','18' ],
+          ['Corrientes','Frente para la Victoria - PJ','2'],
+          ['','Union Civica Radical','2'],
+          ['','Justicialista','1'],
+          ['','Peronismo para la Victoria','1'],
+          ['','PRO','1'],
+          ['Total', '','7' ],
+          ['Entre Rios','Union Civica Radical','3'],
+          ['','Frente para la Victoria - PJ','2'],
+          ['','Justicialista','2'],
+          ['','PRO','2'],
+          ['Total', '','9' ],
+          ['Formosa','Frente para la Victoria - PJ','3'],
+          ['','Union Civica Radical','2'],
+          ['Total', '','5' ],
+          ['Jujuy','Union Civica Radical','2'],
+          ['','Justicialista','2'],
+          ['','PRO','1'],
+          ['','Federal Unidos por una Nueva Argentina','1'],
+          ['Total', '','6' ],
+          ['La Pampa','Justicialista','3'],
+          ['','PRO','1'],
+          ['','Union Civica Radical','1'],
+          ['Total', '','5' ],
+          ['La Rioja','PRO','2'],
+          ['','Justicialista','2'],
+          ['','Union Civica Radical','1'],
+          ['Total', '','5' ],
+          ['Mendoza','Union Civica Radical','4'],
+          ['','PRO','3'],
+          ['','Protectora','1'],
+          ['','Somos Mendoza','1'],
+          ['','Frente para la Victoria - PJ','1'],
+          ['','Justicialista','1'],
+          ['','Partido Intransigente de Mendoza','1'],
+          ['Total', '','11' ],
+          ['Misiones','Frente de la Concordia Misionero','5'],
+          ['','Frente para la Victoria - PJ','1'],
+          ['','Union Civica Radical','1'],
+          ['Total', '','7' ],
+          ['Neuquen','Frente para la Victoria - PJ','2'],
+          ['','PRO','2'],
+          ['','Movimiento Popular Neuquino','1'],
+          ['Total', '','5' ],
+          ['Rio Negro','Frente para la Victoria - PJ','2'],
+          ['','Peronismo para la Victoria','1'],
+          ['','PRO','1'],
+          ['','Union Civica Radical','1'],
+          ['Total', '','5' ],
+          ['Salta','Justicialista','3'],
+          ['','Frente para la Victoria - PJ','1'],
+          ['','PRO','1'],
+          ['','Salta Somos Todos','1'],
+          ['','Union Civica Radical','1'],
+          ['Total', '','7' ],
+          ['San Juan','Frente para la Victoria - PJ','2'],
+          ['','Somos San Juan','1'],
+          ['','Partido Bloquista de San Juan','1'],
+          ['','PRO','1'],
+          ['','Todos Juntos por San Juan','1'],
+          ['Total', '','6' ],
+          ['San Luis','Unidad Justicialista','4'],
+          ['','Union Civica Radical','1'],
+          ['Total', '','5' ],
+          ['Santa Cruz','Frente para la Victoria - PJ','2'],
+          ['','Union Civica Radical','2'],
+          ['','PRO','1'],
+          ['Total', '','5' ],
+          ['Santa Fe','PRO','5'],
+          ['','Frente para la Victoria - PJ','4'],
+          ['','Union Civica Radical','3'],
+          ['','Federal Unidos por una Nueva Argentina','2'],
+          ['','Primero Argentina','1'],
+          ['','Coalicion Civica','1'],
+          ['','Frente Progresista Civico y Social','1'],
+          ['','Nuevo Espacio Santafesino','1'],
+          ['','Partido Socialista','1'],
+          ['','Peronismo para la Victoria','1'],
+          ['Total', '','19' ],
+          ['Santiago del Estero','Frente Civico por Santiago','6'],
+          ['','Federal Unidos por una Nueva Argentina','1'],
+          ['Total', '','7' ],
+          ['Tierra del Fuego','Frente para la Victoria - PJ','3'],
+          ['','PRO','2'],
+          ['Total', '','5' ],
+          ['Tucuman','Justicialista por Tucuman','3'],
+          ['','Frente para la Victoria - PJ','2'],
+          ['','Evolucion Radical','1'],
+          ['','Partido por la Justicia Social','1'],
+          ['','PRO','1'],
+          ['','Union Civica Radical','1'],
+          ['Total', '','9' ]
+        ]);
+
+        var tablaP = new google.visualization.Table(document.getElementById('tablaProvincias_div'));
+
+        tablaP.draw(tablaProvincias, {page:'enable', showRowNumber: true, width: '100%', height: '100%'});
+   
+
+        // Ausencias por Bloque
+
+      var dataAusencias1 = google.visualization.arrayToDataTable([
+        ["Bloque", "Ausencias", { role: "style" } ],
+        ['FPV - PJ',883, "indigo"],
+        ['Justicialista',306, "blue"],
+        ['PRO',279, "gold"],
+        ['UCR',225, "red"],
+        ['Frente Civico por Santiago',187, "lime"],
+        ['Federal Unidos por una Nueva Argentina',168, "green"],
+        ['Cordoba Federal',101, "teal"],
+        ['Coalicion Civica',83, "steelblue"],
+        ['Frente de la Concordia Misionero',70, "orange"],
+        ['Justicialista por Tucuman',68, "olive"],
+        ['Peronismo para la Victoria',65, "moccasin"],
+        ['Unidad Justicialista',65, "orchid"],
+        ['Evolucion Radical',46, "chocolate"],
+        ['Primero Argentina',35, "indianred"],
+        ['Libres del Sur',35, "cadetblue"]
+      ]);
+
+      var viewAusencias1 = new google.visualization.DataView(dataAusencias1);
+      viewAusencias1.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var optionsAusencias1 = {
+        title: "Ausencias por Bloque",
+        width: 590,
+        height: 350,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chartAusencias1 = new google.visualization.ColumnChart(document.getElementById("columnchart_ausencias1"));
+      chartAusencias1.draw(viewAusencias1, optionsAusencias1);
+
+
+      var dataAusencias2 = google.visualization.arrayToDataTable([
+        ["Bloque", "Ausencias", { role: "style" } ],
+        ['Cordoba Trabajo y Produccion',32, "indigo"],
+        ['Salta Somos Todos',28, "purple"],
+        ['Fte. Civico y Social de Catamarca',28, "silver"],
+        ['Nuevo Espacio Santafesino',27, "royalblue"],
+        ['Cultura, Educacion y Trabajo',26, "grey"],
+        ['Elijo Catamarca',21, "tan"],
+        ['Somos Mendoza',19, "peru"],
+        ['PTS - FI',17, "indigo"],
+        ['Partido Bloquista de San Juan',16,"pink"],
+        ['Movimiento Popular Neuquino',13, "salmon"],
+        ['Somos San Juan',11, "black"],
+        ['Concertacion FORJA',11, "blue"],
+        ['Todos Juntos por San Juan',8, "gold"],
+        ['FIT',8, "green"],
+        ['Partido Socialista',5, "gold"],
+        ['Trabajo y Dignidad',4, "blue"],
+        ['Partido por la Justicia Social',3, "red"]
+      ]);
+
+      var viewAusencias2 = new google.visualization.DataView(dataAusencias2);
+      viewAusencias2.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var optionsAusencias2 = {
+        title: "Ausencias por Bloque",
+        width: 600,
+        height: 350,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chartAusencias2 = new google.visualization.ColumnChart(document.getElementById("columnchart_ausencias2"));
+      chartAusencias2.draw(viewAusencias2, optionsAusencias2);
+
+
+      // Top Ten de ausencias y presencias de diputados
+      var dataAusenciasDiputados = google.visualization.arrayToDataTable([
+        ["Bloque", "Ausencias", { role: "style" } ],
+        ['AYALA',40, "indigo"],
+        ['MEDINA',40, "purple"],
+        ['MACIAS',42, "silver"],
+        ['MOSQUEDA',43, "royalblue"],
+        ['SCIOLI',43, "grey"],
+        ['INFANTE',45, "tan"],
+        ['CARRIÓ',46, "peru"],
+        ['VIGO',53, "indigo"],
+        ['VALLEJOS',61,"pink"],
+        ['PASTORIZA',63, "salmon"]
+      ]);
+
+      var viewAusenciasDiputados = new google.visualization.DataView(dataAusenciasDiputados);
+      viewAusenciasDiputados.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var optionsAusenciasDiputados = {
+        title: "",
+        width: 510,
+        height: 350,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chartAusenciasDiputados = new google.visualization.ColumnChart(document.getElementById("columnchart_ausenciasDiputados"));
+      chartAusenciasDiputados.draw(viewAusenciasDiputados, optionsAusenciasDiputados);
+
+      // Diputados mas presentes
+
+         var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Nombre');
+        data.addColumn('string', 'Partido');
+        data.addRows([
+        ['AICEGA, Juan','PRO'],
+        ['BANFI, Karina Verónica','Unión Cívica Radical'],
+        ['URROZ, Paula','PRO'],
+        ['NUÑEZ, José Carlos','PRO'],
+        ['TORELLO, Pablo','PRO'],
+        ['FREGONESE, Alicia','PRO'],
+        ['LOSPENNATO, Silvia Gabriela','PRO'],
+        ['PÉREZ, Martín Alejandro','Frente para la Victoria - PJ'],
+        ['RODRIGUEZ, Matías David','Frente para la Victoria - PJ'],
+        ['FERNANDEZ LANGAN, Ezequiel','PRO'],
+        ['GARRETÓN, Facundo','PRO'],
+        ['AUSTIN, Brenda Lis','Unión Cívica Radical'],
+        ['ZOTTOS, Miguel Andrés Costas','Justicialista'],
+        ['VILLAVICENCIO, María Teresita','Evolución Radical'],
+        ['BRAMBILLA, Sofía','PRO'],
+        ['SAHAD, Julio Enrique','PRO'],
+        ['TUNDIS, Mirta','Federal Unidos por una Nueva Argentina'],
+        ['SCHMIDT LIERMANN, Cornelia','PRO'],
+        ['FERNANDEZ, Carlos Alberto','Unión Cívica Radical'],
+        ['WOLFF, Waldo Ezequiel','PRO'],
+        ['REYES, Roxana Nahir','Unión Cívica Radical'],
+        ['MENNA, Gustavo','Unión Cívica Radical'],
+        ['BAZZE, Miguel Ángel','Unión Cívica Radical'],
+        ['PASTORI, Luis Mario','Unión Cívica Radical'],
+        ['ZAMARBIDE, Federico Raúl','Unión Cívica Radical'],
+        ['BUIL, Sergio Omar','PRO'],
+        ['BURGOS, María Gabriela','Unión Cívica Radical'],
+        ['NANNI, Miguel','Unión Cívica Radical'],
+        ['WECHSLER, Marcelo Germán','PRO'],
+        ['MAQUIEYRA, Martín','PRO'],
+        ['BENEDETTI, Atilio Francisco Salvador','Unión Cívica Radical'],
+        ['IGLESIAS, Fernando Adolfo','PRO'],
+        ['SOLANAS, Julio Rodolfo','Frente para la Victoria - PJ'],
+        ['POLLEDO, Carmen','PRO'],
+        ['PETRI, Luis Alfonso','Unión Cívica Radical']
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('tablaDiputados_div'));
+
+        table.draw(data, { width: '100%', height: '100%'});
+
+    }
+  </script>
+</head>
+
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
+  <span class="w3-bar-item w3-right">Autores: Diego Santos -  Axel Savizky</span>
+</div>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i> Honorable Cámara de Diputados de la Nación</b></h5>
+    <p> La Cámara de Diputados de la Nación Argentina, también denominada Cámara Baja, esta compuesta por 257 diputados que representan a los 24 districtos electorales del país. Los representantes de cada districto son elegidos utilizando el sistema de representación proporcional D'Hondt. </p>
+  </header>
+
+
+  <div style="padding-top:22px">
+    <h5><b> Interbloques</b></h5>
+    <p>La composición de la Cámara de Diputados esta formada por alianzas denominadas <b>Interbloques</b> que agrupa a diferentes partidos. El objetivo es actuar de forma conjunta dentro del recinto.</p>
+  </div>
+  <div class="w3-panel">
+    <div id="chart_div"></div>
+  </div>
+   <div class="w3-panel">
+    <div id="chart_div2"></div>
+  </div>
+
+  <div class="w3-panel" style="padding-top:22px">
+    <h5><b> Composición de los Interbloques</b></h5>
+    <p>En la actual composición de la Cámara, existen 4 <b>Interbloques</b> formados por más de un partido.</p>
+    <div class="w3-half">
+      <div id="cambiemos_piechart" style="width: 550px; height: 350px;">
+      </div>
+    </div>
+    <div class="w3-half">
+      <div id="fpv_piechart" style="width: 550px; height: 350px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-panel">
+    <div class="w3-half">
+      <div id="argfederal_piechart" style="width: 550px; height: 350px;">
+      </div>
+    </div>
+    <div class="w3-half">
+      <div id="fru_piechart" style="width: 550px; height: 350px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-panel" style="padding-top:22px">
+    <h5><b> Distribución de los Diputados por Provincias y Bloques</b></h5>
+    <p>Cada provincia tiene un número de representantes en la Cámara que se obtiene utilizando el sistema de representación proporcional D'Hondt.</p>
+    <div id="tablaProvincias_div"></div>
+  </div>
+
+  <div class="w3-panel" style="padding-top:22px">
+    <h5><b> Ausencias en las votaciones</b></h5>
+    <p>Durante la votación de las 72 leyes sancionadas en el período Enero - Agosto de 2018, se registraron 2893 ausencias.</p>
+    <p>El diputado del Frente Para la Victoria Julio De Vido se encuentra suspendido y en este sus inasistencias son consideradas.</p>
+    <div class="w3-half">
+      <div id="columnchart_ausencias1" style="width: 900px; height: 400px;"></div>
+    </div>
+    <div class="w3-half">  
+      <div id="columnchart_ausencias2" style="width: 900px; height: 400px;"></div>
+    </div>
+  </div>
+
+
+  <div class="w3-container">
+    <h5><b> Los Diputados más faltadores</b></h5>
+    <p>Durante la votación de las leyes algunos estuvieron mas ausentes que otros. Este es el ranking de los más faltadores.</p>
+    <p>Se exceptua del ranking al diputado del Frente Para la Victoria Julio De Vido que se encuentra suspendido.</p>
+
+      <div class="w3-container" id="columnchart_ausenciasDiputados" style="width: 500px; height: 400px; padding-left:150px"></div>
+  </div>
+
+
+  <div class="w3-panel">
+    <h5><b> Diputados con menos faltas</b></h5>
+    <p>Afortunadamente hay un conjunto de diputados que toma más en serio la labor cívica y durante el período tuvo asistencia perfecta a las votaciones.</p>
+    <div id="tablaDiputados_div"></div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-16 w3-light-grey">
+    <h4>Fuentes</h4>
+    <p>La información contenida fue obtenida del sitio oficial de <a href="https://www.diputados.gov.ar/" target="_blank">Diputados</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
