@@ -315,7 +315,7 @@
 
         var tablaP = new google.visualization.Table(document.getElementById('tablaProvincias_div'));
 
-        tablaP.draw(tablaProvincias, {page:'enable', showRowNumber: true, width: '100%', height: '100%'});
+        tablaP.draw(tablaProvincias, {page:'enable', pageSize:'23' , width: '100%', height: '100%'});
    
 
         // Ausencias por Bloque
@@ -433,7 +433,7 @@
 
       // Diputados mas presentes
 
-         var data = new google.visualization.DataTable();
+        var data = new google.visualization.DataTable();
         data.addColumn('string', 'Nombre');
         data.addColumn('string', 'Partido');
         data.addRows([
@@ -476,7 +476,49 @@
 
         var table = new google.visualization.Table(document.getElementById('tablaDiputados_div'));
 
-        table.draw(data, { width: '100%', height: '100%'});
+        table.draw(data, {showRowNumber: true , page:'enable', pageSize:'20', width: '100%', height: '100%'});
+
+
+        // Tabla de provincia y partidos mayoritarios
+
+        var dataPartidosDominantes = new google.visualization.DataTable();
+        dataPartidosDominantes.addColumn('string', 'Provincia');
+        dataPartidosDominantes.addColumn('string', 'Partido Mayoritario');
+        dataPartidosDominantes.addColumn('string', 'Partido Gobernador');
+        dataPartidosDominantes.addRows([
+        ['Buenos Aires','Frente para la Victoria','PRO'],
+        ['C.A.B.A.','PRO','PRO'],
+        ['Catamarca','Elijo Catamarca','Frente para la Victoria'],
+        ['Chaco','No hay Mayoritario','Frente para la Victoria'],
+        ['Chubut','Frente para la Victoria','Chubut Somos Todos'],
+        ['Córdoba','Unión Cívica Radical','Unión por Cordoba'],
+       	['Corrientes','Frente para la Victoria','ECO'],
+    	['Entre Ríos','Unión Cívica Radical','Frente para la Victoria'],
+   	    ['Formosa','Frente para la Victoria','Frente para la Victoria'],
+   	    ['Jujuy','No hay Mayoritario','Unión Cívica Radical'],
+   	    ['La Pampa','Justicialista','Frente para la Victoria'],
+  	    ['La Rioja','No hay Mayoritario','Frente para la Victoria'],
+    	['Mendoza','Unión Cívica Radical','Unión Cívica Radical'],
+   	    ['Misiones','Frente de la Concordia Misionero','Frente para la Victoria'],
+       	['Neuquén','No hay Mayoritario','Movimiento Popular Neuquino'],
+       	['Rio Negro','Frente para la Victoria','Juntos Somos Rio Negro'],
+       	['Salta','Justicialista','Justicialista'],
+       	['San Juan','Frente para la Victoria','Frente para la Victoria'],
+       	['San Luis','Unidad Justicialista','Compromiso Federal'],
+       	['Santa Cruz','No hay Mayoritario','Frente para la Victoria'],
+       	['Santa Fe','PRO','Frente Progresista'],
+       	['Santiago del Estero','Frente Cívico por Santiago','Frente para la Victoria'],
+       	['Tierra del Fuego','Frente para la Victoria','Frente para la Victoria'],
+       	['Tucumán','Justicialista por Tucumán','Frente para la Victoria']
+        ]);
+
+        var tablePartidosDominantes = new google.visualization.Table(document.getElementById('tablaPartidosDominantes_div'));
+
+        tablePartidosDominantes.draw(dataPartidosDominantes, { width: '100%', height: '100%'});
+
+
+
+
 
     }
   </script>
@@ -571,6 +613,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <h5><b> Diputados con menos faltas</b></h5>
     <p>Afortunadamente hay un conjunto de diputados que toma más en serio la labor cívica y durante el período tuvo asistencia perfecta a las votaciones.</p>
     <div id="tablaDiputados_div"></div>
+  </div>
+
+  <div class="w3-panel">
+    <h5><b> Partido que Gobierna vs Partido con más Diputados</b></h5>
+    <div id="tablaPartidosDominantes_div"></div>
   </div>
 
 

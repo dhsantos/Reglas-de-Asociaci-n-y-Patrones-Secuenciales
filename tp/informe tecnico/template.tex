@@ -1,0 +1,152 @@
+\documentclass{endm}
+\usepackage{endmmacro}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{setspace}  
+\setlength{\textwidth}{150mm}
+
+% The following is enclosed to allow easy detection of differences in
+% ascii coding.
+% Upper-case    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+% Lower-case    a b c d e f g h i j k l m n o p q r s t u v w x y z
+% Digits        0 1 2 3 4 5 6 7 8 9
+% Exclamation   !           Double quote "          Hash (number) #
+% Dollar        $           Percent      %          Ampersand     &
+% Acute accent  '           Left paren   (          Right paren   )
+% Asterisk      *           Plus         +          Comma         ,
+% Minus         -           Point        .          Solidus       /
+% Colon         :           Semicolon    ;          Less than     <
+% Equals        =           Greater than >          Question mark ?
+% At            @           Left bracket [          Backslash     \
+% Right bracket ]           Circumflex   ^          Underscore    _
+% Grave accent  `           Left brace   {          Vertical bar  |
+% Right brace   }           Tilde        ~
+
+\newcommand{\Nat}{{\mathbb N}}
+\newcommand{\Real}{{\mathbb R}}
+\begin{document}
+% DO NOT REMOVE: Creates space for Elsevier logo, ScienceDirect logo
+% and ENDM logo
+\begin{verbatim}\end{verbatim}\vspace{.5cm}
+\begin{frontmatter}
+\title{Las Reglas del Congreso}
+\author{Diego Santos\thanksref{sdemail}}
+\author{Axel Savizky  \thanksref{raemail}}
+\address{Reglas de Asociación y Simulación de Patrones - Departamento de Computación - Universidad de Buenos Aires - Bs.As., Argentina}
+\thanks[raemail]{Email:
+  \href{mailto:axel.savizky@gmail.com} {\texttt{\normalshape
+   axel.savizky@gmail.com}}}
+\thanks[sdemail]{Email:
+  \href{mailto:diego.h.santos@gmail.com} {\texttt{\normalshape
+   diego.h.santos@gmail.com}}}
+\begin{abstract}
+Todos los años durante el período de marzo a diciembre 257 diputados se reunen para determinar que nuevas leyes regiran sobre el pueblo argentino. En el presente trabajo se analizó un conjunto de votaciones de la Cámara de Diputados de la Nación con el fin de identificar los patrones que se esconden en las sanciones de leyes.
+\end{abstract}
+\begin{keyword}
+Diputados, Transacciones, Monotonía, Leyes, Ausencias.
+\end{keyword}
+\end{frontmatter}
+\section{Presentación}\label{intro}
+El objetivo del informe es determinar reglas en las votaciones de ley de la Cámara de Diputados del Congreso de la Nación Argentina, a partir de los resultados de las votaciones de cada ley correspondientes al período de marzo a septiembre de 2018.\\
+
+Durante este período se trataron 72 leyes, involucrando a cada una 257 diputados de 32 partidos poltíticos agrupados en 17 interbloques.\\
+
+La datos para la confección del reporte se obtuvieron de la página web de la Cámara de Diputados. \footnote{https://www.diputados.gov.ar/}
+
+\subsection{Set de Datos}
+
+El set de datos utilizado consta de 72 archivos csv donde en cada uno de ellos se muestra por fila: \\
+
+Diputado $|$ Partido $|$ Provincia $|$ ¿Cómo voto?\\
+
+Es decir que cada archivo tiene 257 filas donde en cada una se presenta un diputado, el partido al que pertenece, la provincia a la que representa y cual fue su voto.\\
+
+El campo ¿Cómo voto? tiene 5 estados posibles:\\
+
+\begin{itemize}
+\item Presidente: Si ejerció como presidente de la sesión.
+\item Afirmativo: Si su voto a favor.
+\item Negativo: Si su voto fue en contra.
+\item Abstención: Si se excuso de votar.
+\item Ausente: Si no estuvo presente en el recinto.
+\end{itemize}
+
+\subsection{Transacción}
+
+Los datos en el formato que se obtuvieron no resultan útiles para establecer reglas más allá de las evidentes, por lo que fue necesario reagrupar los datos en otro tipo de transacción. \\
+
+De un análisis de los datos en crudo se descubrió que en casi la totalidad de los casos la votación de los diputados es en bloque. Es decir, siguen una disciplina partidaria donde todos los pertenecientes al mismo partido votan igual, sin importar la provincia a la que pertenezcan. Además dicha disciplina suele aplicarse también para los interbloques. \\
+
+Entonces el voto de un diputado esta condicionado a la decisión del partido y no esta condicionado por la provincia a la que representa. Entonces para el armado de la transacción no es necesario contar con el nombre del diputado, sino por como voto su partido esa ley. \\
+
+Además como cada provincia esta representada por un subconjunto de diputados, proporcional a la población de dicha provincia, que pertenecen a un subconjunto de los partidos, se determino que una forma conveniente de representar la decisión de la provincia es tomando el valor de la mayoría de los votos de los diputados que la representan. \\
+
+En base a esto se decidió construir la transacción con el siguiente formato: \\
+
+Ley $|$ Estado $|$ Partido1 $|$...$|$ Partido32 $|$ Provincia1 $|$ ... $|$ Provincia22 \\
+
+Donde el valor de cada campo columna puede tomar los siguientes valores: \\
+
+Para \textbf{Ley} \\
+
+El nombre de archivo csv que corresponde al dataset de un tratamiento de ley. \\
+
+Para \textbf{Estado} \\
+
+\begin{itemize}
+\item $LEY APROBADA$: Si la ley fue aprobada.
+\item $LEY RECHAZADA$: Si la ley no fue aprobada. \\
+\end{itemize}
+
+ Para \textbf{Partido X} \\
+
+\begin{itemize}
+\item $PARTIDO [AFIRMATIVO]$
+\item $PARTIDO [NEGATIVO]$
+\item $PARTIDO [ABSTENCION]$
+\item $PARTIDO [AUSENTE]$ 
+\item $PARTIDO [EMPATE]$ \\
+\end{itemize}
+
+Donde el valor se define siguiendo el criterio de las mayorías. Para la ley que presenta la transacción se contabilizan los votos de todos los diputados del partido
+y se asigna el resultado de la mayoria. EMPATE se utiliza si no hay un criterio mayoritario. \\
+
+Por ejemplo: \\
+
+Partido1 que tiene 5 diputados representantes, 4 votan afirmativo y 1 ausente, al haber mas votos positivos el resultado es PARTIDO1 [AFIRMATIVO] \\
+
+Partido2 que tiene 2 diputados representantes, 1 vota afirmativo y otro 1 ausente. El resultado es PARTIDO1[EMPATE] \\
+
+Para \textbf{Provincia X} \\
+
+\begin{itemize}
+\item $PROVINCIA [AFIRMATIVO]$
+\item $PROVINCIA [NEGATIVO]$
+\item $PROVINCIA [ABSTENCION]$
+\item $PROVINCIA [AUSENTE]$ 
+\item $PROVINCIA [EMPATE]$ \\
+\end{itemize}
+
+Donde el valor se define siguiendo el criterio de las mayorías. Para la ley que presenta la transacción se contabilizan los votos de todos los diputados que pertenecen a esa provincia, sin considerar el partido y se asigna el resultado de la mayoria. EMPATE se utiliza si no hay un criterio mayoritario. \\
+
+Por ejemplo: \\
+
+Una provincia que tiene 2 partidos que la representan en el recinto. El Partido1 tiene 5 diputados, 4 votan afirmativo y 1 ausente. El Partido2 tiene 3 diputados que votan de forma negativa. El resultado es PARTIDO1 [AFIRMATIVO] \\
+
+Tomar esta representación de los datos es una forma de generalizar los resultados de las votaciones por partidos y por provincias que permite evitar representar la monotonía de la votación indivividual de los diputados.
+
+Un factor que puede ser decisivo en la representación de cada partido y provincia es la gran cantidad de ausencias que tienen los diputados a las votaciones, generando los casos de ausencias o empates.
+
+\section{Reglas}\label{desarrollo}
+
+\subsection{Partidos}
+\subsection{Provincias}
+\subsection{Interacciones entre Partidos y Provincias}
+
+\section{Conclusiones}
+
+\section{Referencias Bibliográficas}
+
+\end{document}
