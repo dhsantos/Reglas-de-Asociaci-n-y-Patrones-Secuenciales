@@ -4,6 +4,31 @@ library (arulesViz)
 path_resultados <- "~/Escritorio/Reglas de Asociacion/TP Reglas de Asociacion/datos"
 path_archivos <- "~/Escritorio/Reglas de Asociacion/TP Reglas de Asociacion/datos"
 
+
+################################################ PARTIDOS  #######################################################################
+
+#La idea de este caso es sacar las relaciones 1 a 1 entre los partidos, si uno vota tal como vota el otro
+
+#Interbloque Cambiemos comportamiento dentro del mismo bloque
+basketPartidos <- read.transactions(paste(path_archivos, "transacciones_partidos.csv" , sep="/"), format = "basket", sep = ',', rm.duplicates = FALSE)
+#itemFrequency(basketPartidos)
+png(filename=paste(path_resultados, "soportesPartidos.png" , sep="/"))
+itemFrequencyPlot(basketPartidos, names = FALSE, main="Distribucion del Soporte de los Partidos")
+dev.off()
+reglasPartidos <- apriori(basketPartidos , parameter=list(minlen=2, maxlen = 2, support=0.4,confidence = 0.75, target = "rules"))
+# Ver si hace falta
+#reglasPartidos <- reglasPartidos[is.redundant(x = reglasPartidos, measure = "confidence")]
+inspect(sort(reglasPartidos, by = "lift"))
+#plot(reglasCambiemos, method="grouped", measure="confidence")
+write.PMML(reglasPartidos, file = paste(path_resultados, "reglasPartidos.xml" , sep="/")) #Se guardan las reglas en xml
+p <- plot(reglasPartidos, method = "graph", engine = "htmlwidget") #Las reglas en forma de grafo
+htmlwidgets::saveWidget(p, paste(path_resultados, "grafoPartidos.html" , sep="/"), selfcontained = FALSE)
+p <-plot(reglasPartidos, method = "grouped matrix", engine = "interactive") #Las reglas en forma de grafo y matriz
+htmlwidgets::saveWidget(p, paste(path_resultados, "matrizGrafoPartidos.html" , sep="/")), selfcontained = FALSE)
+p <-plot(reglasPartidos, method="matrix", engine = "interactive", measure=c("support","confidence")) #Las reglas en forma de matriz de colores no se si es util pero es colorido
+htmlwidgets::saveWidget(p, paste(path_resultados, "matrizPartidos.html" , sep="/"), selfcontained = FALSE)
+
+
 ################################################ Interbloque Cambiemos  ########################################################
 cambiemos <- c("Coalicion Civica [NEGATIVO]","Coalicion Civica [POSITIVO]","Partido por la Justicia Social [NEGATIVO]","Partido por la Justicia Social [POSITIVO]","PRO [NEGATIVO]","PRO [POSITIVO]","Salta Somos Todos [POSITIVO]","Salta Somos Todos [NEGATIVO]","Union Civica Radical [NEGATIVO]","Union Civica Radical [POSITIVO]","Fte. Civico y Social de Catamarca [POSITIVO]","Fte. Civico y Social de Catamarca [NEGATIVO]")
 
@@ -18,7 +43,7 @@ dev.off()
 reglasCambiemos <- apriori(basketCambiemos , parameter=list(minlen=6, maxtime=50, support=0.1,confidence = 0.65, target = "rules"))
 inspect(sort(reglasCambiemos, by = "lift"))
 #plot(reglasCambiemos, method="grouped", measure="confidence")
-write.PMML(reglas, file = paste(path_resultados, "reglasInterbloqueCambiemos.xml" , sep="/")) #Se guardan las reglas en xml
+write.PMML(reglasCambiemos, file = paste(path_resultados, "reglasInterbloqueCambiemos.xml" , sep="/")) #Se guardan las reglas en xml
 p <- plot(reglasCambiemos, method = "graph", engine = "htmlwidget") #Las reglas en forma de grafo
 htmlwidgets::saveWidget(p, paste(path_resultados, "grafoInterbloqueCambiemos.html" , sep="/"), selfcontained = FALSE)
 p <-plot(reglasCambiemos, method = "grouped matrix", engine = "interactive") #Las reglas en forma de grafo y matriz
@@ -264,7 +289,7 @@ dev.off()
 reglasLeyes <- apriori(basketLeyes, parameter=list(minlen=6, maxtime=50, support=0.1,confidence = 0.65, target = "rules"))
 inspect(sort(reglasLeyes, by = "lift"))
 #plot(reglasLeyes, method="grouped", measure="confidence")
-write.PMML(reglasProvinciasPartidos, file = paste(path_resultados, "reglasLeyes.xml" , sep="/"))
+write.PMML(reglasLeyes, file = paste(path_resultados, "reglasLeyes.xml" , sep="/"))
 p <- plot(reglasLeyes, method = "graph", engine = "htmlwidget") 
 htmlwidgets::saveWidget(p, paste(path_resultados, "grafoLeyes.html" , sep="/"), selfcontained = FALSE)
 p <-plot(reglasLeyes, method = "grouped matrix", engine = "interactive") 
