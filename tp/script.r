@@ -254,8 +254,9 @@ htmlwidgets::saveWidget(p, paste(path_resultados, "matrizProvinciasPartidos.html
 
 
 ########################################## APROBACIONES DE LEYES ####################################################################
+leyes <- c("LEY_APROBADA","LEY_RECHAZADA")
 
-basketLeyes <- read.transactions(paste(path_archivos, "transacciones.csv" , sep="/"), format = "basket", sep = ',', rm.duplicates = FALSE)
+basketLeyes <- read.transactions(paste(path_archivos, "transacciones.csv" , sep="/"), format = "basket", sep = ',', rm.duplicates = FALSE, appearance = list(default="lhs", rhs=leyes))
 #itemFrequency(basketLeyes)
 png(filename=paste(path_resultados, "soportesLeyes.png" , sep="/"))
 itemFrequencyPlot(basketLeyes, names = FALSE, main="Distribucion del Soporte para las Leyes tratadas")
