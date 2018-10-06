@@ -1,8 +1,8 @@
 library (arules)
 library (arulesViz)
 
-path_resultados <- "~/Escritorio/Reglas de Asociacion/TP Reglas de Asociacion/datos"
-path_archivos <- "~/Escritorio/Reglas de Asociacion/TP Reglas de Asociacion/datos"
+path_resultados <- "~/home/diego/Reglas-de-Asociaci-n-y-Patrones-Secuenciales/tp/datos"
+path_archivos <- "~/home/diego/Reglas-de-Asociaci-n-y-Patrones-Secuenciales/tp/datos"
 
 
 ################################################ PARTIDOS  #######################################################################
