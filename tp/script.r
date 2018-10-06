@@ -13,7 +13,7 @@ path_archivos <- "~/Reglas-de-Asociaci-n-y-Patrones-Secuenciales/tp/datos"
 basketPartidos <- read.transactions(paste(path_archivos, "transacciones_partidos.csv" , sep="/"), format = "basket", sep = ',', rm.duplicates = FALSE)
 #itemFrequency(basketPartidos)
 png(filename=paste(path_resultados, "soportesPartidos.png" , sep="/"))
-itemFrequencyPlot(basketPartidos, names = FALSE, main="Distribucion del Soporte de los Partidos")
+itemFrequencyPlot(basketPartidos, decreasing=TRUE , names = FALSE, main="Distribucion del Soporte de los Partidos")
 dev.off()
 reglasPartidos <- apriori(basketPartidos , parameter=list(minlen=2, maxlen = 2, support=0.4,confidence = 0.75, target = "rules"))
 # Ver si hace falta
