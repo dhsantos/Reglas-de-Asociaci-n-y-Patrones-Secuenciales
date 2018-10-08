@@ -23,13 +23,11 @@ d <- which(duplicated(gi))
 reglasPartidos <- reglasPartidos[-d]
 inspect(sort(reglasPartidos, by = "lift"))
 png(filename=paste(path_resultados_graficos, "paracoordPartidos.png" , sep="/"))
-plot(head(sort(reglasPartidos, by = "lift"), n= 10), method = "paracoord", control = list(reorder = TRUE))
+plot(head(reglasPartidos, n= 5), method = "paracoord", control = list(reorder = TRUE))
 dev.off()
 write.PMML(reglasPartidos, file = paste(path_resultados_xml, "reglasPartidos.xml" , sep="/")) #Se guardan las reglas en xml
 p <- plot(reglasPartidos, method = "graph", engine = "htmlwidget") #Las reglas en forma de grafo
 htmlwidgets::saveWidget(p, paste(path_resultados_html, "grafoPartidos1a1.html" , sep="/"), selfcontained = FALSE)
-#p <-plot(reglasPartidos, method = "grouped matrix", engine = "htmlwidget") #Las reglas en forma de grafo y matriz
-#htmlwidgets::saveWidget(p, paste(path_resultados_html, "matrizGrafoPartidos.html" , sep="/")), selfcontained = FALSE)
 p <-plot(reglasPartidos, method="matrix", engine = "htmlwidget", measure=c("support","confidence"), control=list(col=sequential_hcl(200))) #Matriz de bloques
 htmlwidgets::saveWidget(p, paste(path_resultados_html, "matrizPartidos.html" , sep="/"), selfcontained = FALSE)
 
@@ -52,8 +50,6 @@ dev.off()
 write.PMML(reglasPartidos, file = paste(path_resultados_xml, "reglasPartidosGrupos.xml" , sep="/")) #Se guardan las reglas en xml
 p <- plot(reglasPartidos, method = "graph", engine = "htmlwidget") #Las reglas en forma de grafo
 htmlwidgets::saveWidget(p, paste(path_resultados_html, "grafoPartidosGrupos.html" , sep="/"), selfcontained = FALSE)
-#p <-plot(reglasPartidos, method = "grouped matrix", engine = "htmlwidget") #Las reglas en forma de grafo y matriz
-#htmlwidgets::saveWidget(p, paste(path_resultados_html, "matrizGrafoPartidosGrupos.html" , sep="/")), selfcontained = FALSE)
 p <-plot(reglasPartidos, method="matrix", engine = "htmlwidget", measure=c("support","confidence"), control=list(col=sequential_hcl(200))) #Matriz de bloques
 htmlwidgets::saveWidget(p, paste(path_resultados_html, "matrizPartidosGrupos.html" , sep="/"), selfcontained = FALSE)
 
@@ -88,9 +84,8 @@ htmlwidgets::saveWidget(p, paste(path_resultados_html, "matrizCambiemos.html" , 
 
 #Interbloque contra el resto de los partidos: Del lado izquierdo de la regla se agrega las combinaciones del interbloque y se pone una longitud de interbloque + 1. La idea es obtener quien se alinea con el interbloque
 basketCambiemosPartidos <- read.transactions(paste(path_archivos, "transacciones_partidos.csv" , sep="/"), format = "basket", sep = ',', rm.duplicates = FALSE)
-summary(basketCambiemosPartidos)
-png(filename=paste(path_resultados_graficos, "soportesCambiemosRestoPartidos.png" , sep="/"))
-itemFrequencyPlot(basketCambiemosPartidos, names = FALSE, main="Distribucion del Soporte 1-itemset para el Interbloque Cambiemos con el resto de los partidos")
+png(filename=paste(path_resultados_graficos, "soportesParaPartidos.png" , sep="/"))
+itemFrequencyPlot(basketCambiemosPartidos, names = FALSE, main="Distribucion del Soporte 1-itemset por Partidos")
 dev.off()
 reglasCambiemosPartidos <- apriori(basketCambiemosPartidos , parameter=list(minlen=7, maxtime=50, support=0.2,confidence = 0.80, target = "rules"), appearance = list(lhs=cambiemos, default="rhs"))
 inspect(sort(reglasCambiemosPartidos, by = "lift"))
@@ -100,7 +95,7 @@ dev.off()
 write.PMML(reglasCambiemosPartidos, file = paste(path_resultados_xml, "reglasCambiemosRestoPartidos.xml" , sep="/"))
 p <- plot(reglasCambiemosPartidos, method = "graph", engine = "htmlwidget") 
 htmlwidgets::saveWidget(p, paste(path_resultados_html, "grafoInterbloqueCambiemosRestoPartidos.html" , sep="/"), selfcontained = FALSE)
-p <-plot(reglasCambiemosPartidos, method="matrix", engine = "htmlwidget", measure=c("support","confidence"), control=list(col=sequential_hcl(200))) 
+p <-plot(reglasCambiemosPartidos, method="matrix", engine = "htmlwidget", measure=c("support","confidence")) 
 htmlwidgets::saveWidget(p, paste(path_resultados_html, "matrizInterbloqueCambiemosRestoPartidos.html" , sep="/"), selfcontained = FALSE)
 
 
@@ -365,13 +360,5 @@ p <-plot(reglasLeyes, method="matrix", engine = "htmlwidget", measure=c("support
 htmlwidgets::saveWidget(p, paste(path_resultados_html, "matrizLeyes.html" , sep="/"), selfcontained = FALSE)
 
 
-
-
 #################################################################################################################################
-#Cosas por las dudas
-reglasCambiemos <- apriori(basketPartidos , parameter=list(minlen=2, maxtime=50, support=0.25,confidence = 0.75, target = "rules"), appearance = list(rhs= c("Salta Somos Todos [NEGATIVO]", "Salta Somos Todos [POSITIVO]")))
-reglasCambiemos <- reglasCambiemos[is.redundant(x = reglasCambiemos, measure = "confidence")]
-reglasCambiemos <- reglasCambiemos[is.maximal(reglasCambiemos)]
-reglasCambiemos <- subset(reglasCambiemos, (rhs %ain% cambiemos), (lhs %ain% cambiemos))
-p <- plotly_arules(basketCambiemos)
-browseURL("arules.html")
+
