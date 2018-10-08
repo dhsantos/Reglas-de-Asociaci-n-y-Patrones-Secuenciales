@@ -1,0 +1,11 @@
+Consideraciones para leer el trabajo.
+
+0. Para ver este trabajo se requiere una conexion a internet para poder visualizar los graficos.
+1. Dentro de la carpeta informes_gerenciales se encuentran dos archivos:
+	a- infografia_diputados: contiene los datos exploratorios para el trabajo.
+	b- infografia_leyes: contiene una visualizacion de las reglas obtenidas. Si se cambia su locación tambien debe moverse la carpeta src.
+2. Dentro de la carpeta informe tecnico se encuentra el análisis de las reglas
+3. Dentro de la carpeta datos se encuentran los dataset utilizados. Dentro de la subcarpeta base de datos se encuentran las querys realizadas para obtener los datos de la infografia.
+4. Dentro de la carpeta graficos se encuentran los graficos generados.
+5. Dentro de la carpeta xmlEeglas se encuentran las reglas obtenidas.
+6. El archivos script.r representa la última versión que se utilizo del script para ejecutar el algoritmo aPriori.

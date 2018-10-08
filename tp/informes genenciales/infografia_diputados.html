@@ -127,6 +127,26 @@
         fpvChart.draw(fpvData, fpvOpciones);
 
 
+      var enMarchaData = google.visualization.arrayToDataTable([
+          ['Bloque', 'Cantidad de Diputados'],
+          ['Peronismo para la Victoria', 4],
+          ['Libres del Sur', 1]
+        ]);
+
+        var enMarchaOpciones = {
+          title: 'Interbloque En Marcha',
+          legend: 'Distribucion de los Diputados',
+          pieSliceText: 'label',
+          slices: { 1: {offset: 0.1}
+          },
+        };
+
+        var enMarchaChart = new google.visualization.PieChart(document.getElementById('enMarcha_piechart'));
+        enMarchaChart.draw(enMarchaData, enMarchaOpciones);
+
+
+
+
       var argfederalData = google.visualization.arrayToDataTable([
           ['Bloque', 'Cantidad de Diputados'],
           ['JUSTICIALISTA', 18],
@@ -559,7 +579,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
   <div class="w3-panel" style="padding-top:22px">
     <h5><b> Composición de los Interbloques</b></h5>
-    <p>En la actual composición de la Cámara, existen 4 <b>Interbloques</b> formados por más de un partido.</p>
+    <p>En la actual composición de la Cámara, existen 5 <b>Interbloques</b> formados por más de un partido.</p>
     <div class="w3-half">
       <div id="cambiemos_piechart" style="width: 550px; height: 350px;">
       </div>
@@ -581,6 +601,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
+  <div class="w3-panel">
+    <div class="w3-half">
+      <div id="enMarcha_piechart" style="width: 550px; height: 350px;">
+      </div>
+    </div>
+  </div>
+
+
   <div class="w3-panel" style="padding-top:22px">
     <h5><b> Distribución de los Diputados por Provincias y Bloques</b></h5>
     <p>Cada provincia tiene un número de representantes en la Cámara que se obtiene utilizando el sistema de representación proporcional D'Hondt.</p>
@@ -589,7 +617,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
   <div class="w3-panel" style="padding-top:22px">
     <h5><b> Ausencias en las votaciones</b></h5>
-    <p>Durante las votaciones de las 72 leyes sancionadas en el período Enero - Agosto de 2018, se registraron 2893 ausencias.</p>
+    <p>Durante las votaciones de las 72 leyes sancionadas en el período Enero - Septiembre de 2018, se registraron 2893 ausencias.</p>
     <p>El diputado del Frente Para la Victoria Julio De Vido se encuentra suspendido y en este sus inasistencias son consideradas.</p>
     <div class="w3-half">
       <div id="columnchart_ausencias1" style="width: 900px; height: 400px;"></div>

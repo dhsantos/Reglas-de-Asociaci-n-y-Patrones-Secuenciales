@@ -24,8 +24,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
   <span class="w3-bar-item w3-right">Infografía de las Reglas. Autores: Diego Santos -  Axel Savizky</span>
 </div>
-
-
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:50px;margin-top:43px;">
 
@@ -34,30 +32,106 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <h5><b><i class="fa fa-dashboard"></i> Reglas Generadas sobre los votos de los Diputados de la Nación</b></h5>
     <p> Puede explorar todas las reglas obtenidas a partir del análisis de las votaciones con los gráficos interactivos. </p>
     <ul>
-    	<li>Grafico de Grafos: Presenta en forma de grafo acíclico las relaciones entre un voto con las reglas a las que pertenece.</li>
-    	<li>Grafico de Matriz: Presenta sobre los bordes del rectángulo el lado derecho e izquierdo de las reglas. El punto de intersección representa al lift y cuando más grande es el punto, mayor es el lift.</li>
-    	<li style="color:red"><strong>No me acuerdo bien.</strong></li>
+    	<li>Grafico de Grafos: Presenta en forma de grafo acíclico las Reglas entre un voto con las reglas a las que pertenece.</li>
+    	<li>Grafico de Matriz: Presenta sobre los bordes del rectángulo el lado derecho e izquierdo de las reglas. El punto de intersección representa al lift y cuando más grande es el punto, mayor es el lift. Este grafico puede no visualizarse en algunos casos.</li>
     </ul>
   </header>
 
 
   <div style="padding-top:22px">
-    <h5><b> Interbloque Cambiemos</b></h5>
-    <p></p>
+    <h5><b> Partidos</b></h5>
+	<div class="w3-panel">
+	<h5><b> Reglas entre Partidos 1 a 1</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoPartidos1a1.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizPartidos.html"></object>
+	 </div>
+	<div class="w3-panel">
+	<h5><b> Reglas entre grupos de Partidos</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoPartidosGrupos.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizPartidosGrupos.html"></object>
+	 </div>
   </div>
+
+
+  <div style="padding-top:22px">
+    <h5><b> Interbloque Cambiemos</b></h5>
   <div class="w3-panel">
-  	<h5><b> Relaciones dentro del mismo Interbloque</b></h5>
-    <p> Van los 3 graficos interactivos c/u con una breve descripcion</p>
-	<object type="text/html" style="width:90%; height:600px" data="src/grafoInterbloqueCambiemos.html"></object>
+  	<h5><b> Reglas dentro del mismo Interbloque</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoCambiemos.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizCambiemos.html"></object>
   </div>
    <div class="w3-panel">
   	<h5><b> Reglas del Interbloque con los demás partidos</b></h5>
-    <p> Van los 3 graficos interactivos c/u con una breve descripcion</p>
-	<object type="text/html" style="width:90%; height:600px" data="src/grafoInterbloqueCambiemos.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoInterbloqueCambiemosRestoPartidos.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizInterbloqueCambiemosRestoPartidos.html"></object>
   </div>
 
-    <p> Continuar con los demas</p>
+  <div style="padding-top:22px">
+    <h5><b> Interbloque Frente para la Victoria - PJ </b></h5>
+  	<h5><b> Reglas dentro del mismo Interbloque</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoInterbloqueFpv.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizInterbloqueFpv.html"></object>
+  </div>
+   <div class="w3-panel">
+  	<h5><b> Reglas del Interbloque con los demás partidos</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoInterbloqueFpvRestoPartidos.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizInterbloqueFpvRestoPartidos.html"></object>
+  </div>
 
+ <div style="padding-top:22px">
+    <h5><b> Interbloque En Marcha</b></h5>
+  	<h5><b> Reglas dentro del mismo Interbloque</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoInterbloqueMarcha.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizInterbloqueMarcha.html"></object>
+  </div>
+   <div class="w3-panel">
+  	<h5><b> Reglas del Interbloque con los demás partidos</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoInterbloqueEnMarchaRestoPartidos.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizInterbloqueEnMarchaRestoPartidos.html"></object>
+  </div>
+
+ <div style="padding-top:22px">
+    <h5><b> Interbloque Argentina Federal</b></h5>
+	<h5><b> Reglas dentro del mismo Interbloque</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoInterbloqueArgFed.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizInterbloqueArgFed.html"></object>
+  </div>
+   <div class="w3-panel">
+  	<h5><b> Reglas del Interbloque con los demás partidos</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoInterbloqueArgFedRestoPartidos.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizInterbloqueArgFedRestoPartidos.html"></object>
+  </div>
+
+ <div style="padding-top:22px">
+    <h5><b> Interbloque FR - UNA </b></h5>
+	<h5><b> Reglas dentro del mismo Interbloque</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoInterbloqueFr.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizInterbloqueFr.html"></object>
+  </div>
+   <div class="w3-panel">
+  	<h5><b> Reglas del Interbloque con los demás partidos</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoInterbloqueFrRestoPartidos.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizInterbloqueFrRestoPartidos.html"></object>
+  </div>
+
+
+ <div style="padding-top:22px">
+    <h5><b> Provincias</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoProvincias.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizProvincias.html"></object>
+  </div>
+
+ <div style="padding-top:22px">
+    <h5><b> Provincias y Partidos</b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoProvinciasPartidos.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizProvinciasPartidos.html"></object>
+  </div>
+
+ <div style="padding-top:22px">
+    <h5><b> Sanciones de Ley </b></h5>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/grafoLeyes.html"></object>
+ 	<object type="text/html" style="width:90%; height:600px; border-width:5px; border-style:dotted solid;" data="src/matrizLeyes.html"></object>
+  </div>
 
 </div>
 
