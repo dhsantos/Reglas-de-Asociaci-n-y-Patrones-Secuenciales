@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2018 diego" description="arules association rules model">
+  <Extension name="user" value="diego" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2018-10-08 02:07:38</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="2">
+  <DataField name="transaction" optype="categorical" dataType="string"/>
+  <DataField name="item" optype="categorical" dataType="string"/>
+ </DataDictionary>
+ <AssociationModel functionName="associationRules" numberOfTransactions="72" numberOfItems="8" minimumSupport="0.1" minimumConfidence="0.8" numberOfItemsets="5" numberOfRules="3">
+  <MiningSchema>
+   <MiningField name="transaction" usageType="group"/>
+   <MiningField name="item" usageType="active"/>
+  </MiningSchema>
+  <Item id="1" value="Concertacion FORJA[ABSTENCION]"/>
+  <Item id="2" value="Concertacion FORJA[AUSENTE]"/>
+  <Item id="3" value="Concertacion FORJA[NEGATIVO]"/>
+  <Item id="4" value="Concertacion FORJA[POSITIVO]"/>
+  <Item id="5" value="Frente para la Victoria - PJ[ABSTENCION]"/>
+  <Item id="6" value="Frente para la Victoria - PJ[AUSENTE]"/>
+  <Item id="7" value="Frente para la Victoria - PJ[NEGATIVO]"/>
+  <Item id="8" value="Frente para la Victoria - PJ[POSITIVO]"/>
+  <Itemset id="1" numberOfItems="1">
+   <ItemRef itemRef="3"/>
+  </Itemset>
+  <Itemset id="2" numberOfItems="1">
+   <ItemRef itemRef="2"/>
+  </Itemset>
+  <Itemset id="3" numberOfItems="1">
+   <ItemRef itemRef="4"/>
+  </Itemset>
+  <Itemset id="4" numberOfItems="1">
+   <ItemRef itemRef="7"/>
+  </Itemset>
+  <Itemset id="5" numberOfItems="1">
+   <ItemRef itemRef="8"/>
+  </Itemset>
+  <AssociationRule support="0.111111111111111" confidence="0.888888888888889" lift="5.81818181818182" antecedent="1" consequent="4"/>
+  <AssociationRule support="0.125" confidence="0.818181818181818" lift="0.998459167950693" antecedent="2" consequent="5"/>
+  <AssociationRule support="0.680555555555556" confidence="0.98" lift="1.19593220338983" antecedent="3" consequent="5"/>
+ </AssociationModel>
+</PMML>

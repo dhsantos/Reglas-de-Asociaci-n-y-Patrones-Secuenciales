@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2018 diego" description="arules association rules model">
+  <Extension name="user" value="diego" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2018-10-07 18:23:25</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="2">
+  <DataField name="transaction" optype="categorical" dataType="string"/>
+  <DataField name="item" optype="categorical" dataType="string"/>
+ </DataDictionary>
+ <AssociationModel functionName="associationRules" numberOfTransactions="72" numberOfItems="90" minimumSupport="0.5" minimumConfidence="0.85" numberOfItemsets="54" numberOfRules="66">
+  <MiningSchema>
+   <MiningField name="transaction" usageType="group"/>
+   <MiningField name="item" usageType="active"/>
+  </MiningSchema>
+  <Item id="1" value="Buenos Aires[NEGATIVO]"/>
+  <Item id="2" value="Buenos Aires[POSITIVO]"/>
+  <Item id="3" value="C.A.B.A.[NEGATIVO]"/>
+  <Item id="4" value="C.A.B.A.[POSITIVO]"/>
+  <Item id="5" value="Catamarca[AUSENTE]"/>
+  <Item id="6" value="Catamarca[EMPATE]"/>
+  <Item id="7" value="Catamarca[NEGATIVO]"/>
+  <Item id="8" value="Catamarca[POSITIVO]"/>
+  <Item id="9" value="Chaco[AUSENTE]"/>
+  <Item id="10" value="Chaco[EMPATE]"/>
+  <Item id="11" value="Chaco[NEGATIVO]"/>
+  <Item id="12" value="Chaco[POSITIVO]"/>
+  <Item id="13" value="Chubut[AUSENTE]"/>
+  <Item id="14" value="Chubut[EMPATE]"/>
+  <Item id="15" value="Chubut[NEGATIVO]"/>
+  <Item id="16" value="Chubut[POSITIVO]"/>
+  <Item id="17" value="Cordoba[AUSENTE]"/>
+  <Item id="18" value="Cordoba[NEGATIVO]"/>
+  <Item id="19" value="Cordoba[POSITIVO]"/>
+  <Item id="20" value="Corrientes[AUSENTE]"/>
+  <Item id="21" value="Corrientes[EMPATE]"/>
+  <Item id="22" value="Corrientes[NEGATIVO]"/>
+  <Item id="23" value="Corrientes[POSITIVO]"/>
+  <Item id="24" value="Entre Rios[EMPATE]"/>
+  <Item id="25" value="Entre Rios[NEGATIVO]"/>
+  <Item id="26" value="Entre Rios[POSITIVO]"/>
+  <Item id="27" value="Formosa[ABSTENCION]"/>
+  <Item id="28" value="Formosa[EMPATE]"/>
+  <Item id="29" value="Formosa[NEGATIVO]"/>
+  <Item id="30" value="Formosa[POSITIVO]"/>
+  <Item id="31" value="Jujuy[EMPATE]"/>
+  <Item id="32" value="Jujuy[NEGATIVO]"/>
+  <Item id="33" value="Jujuy[POSITIVO]"/>
+  <Item id="34" value="La Pampa[ABSTENCION]"/>
+  <Item id="35" value="La Pampa[AUSENTE]"/>
+  <Item id="36" value="La Pampa[EMPATE]"/>
+  <Item id="37" value="La Pampa[NEGATIVO]"/>
+  <Item id="38" value="La Pampa[POSITIVO]"/>
+  <Item id="39" value="La Rioja[AUSENTE]"/>
+  <Item id="40" value="La Rioja[EMPATE]"/>
+  <Item id="41" value="La Rioja[NEGATIVO]"/>
+  <Item id="42" value="La Rioja[POSITIVO]"/>
+  <Item id="43" value="Mendoza[EMPATE]"/>
+  <Item id="44" value="Mendoza[NEGATIVO]"/>
+  <Item id="45" value="Mendoza[POSITIVO]"/>
+  <Item id="46" value="Misiones[AUSENTE]"/>
+  <Item id="47" value="Misiones[EMPATE]"/>
+  <Item id="48" value="Misiones[NEGATIVO]"/>
+  <Item id="49" value="Misiones[POSITIVO]"/>
+  <Item id="50" value="Neuquen[AUSENTE]"/>
+  <Item id="51" value="Neuquen[EMPATE]"/>
+  <Item id="52" value="Neuquen[NEGATIVO]"/>
+  <Item id="53" value="Neuquen[POSITIVO]"/>
+  <Item id="54" value="Rio Negro[AUSENTE]"/>
+  <Item id="55" value="Rio Negro[EMPATE]"/>
+  <Item id="56" value="Rio Negro[NEGATIVO]"/>
+  <Item id="57" value="Rio Negro[POSITIVO]"/>
+  <Item id="58" value="Salta[AUSENTE]"/>
+  <Item id="59" value="Salta[EMPATE]"/>
+  <Item id="60" value="Salta[NEGATIVO]"/>
+  <Item id="61" value="Salta[POSITIVO]"/>
+  <Item id="62" value="San Juan[ABSTENCION]"/>
+  <Item id="63" value="San Juan[AUSENTE]"/>
+  <Item id="64" value="San Juan[EMPATE]"/>
+  <Item id="65" value="San Juan[NEGATIVO]"/>
+  <Item id="66" value="San Juan[POSITIVO]"/>
+  <Item id="67" value="San Luis[ABSTENCION]"/>
+  <Item id="68" value="San Luis[AUSENTE]"/>
+  <Item id="69" value="San Luis[EMPATE]"/>
+  <Item id="70" value="San Luis[NEGATIVO]"/>
+  <Item id="71" value="San Luis[POSITIVO]"/>
+  <Item id="72" value="Santa Cruz[AUSENTE]"/>
+  <Item id="73" value="Santa Cruz[EMPATE]"/>
+  <Item id="74" value="Santa Cruz[NEGATIVO]"/>
+  <Item id="75" value="Santa Cruz[POSITIVO]"/>
+  <Item id="76" value="Santa Fe[EMPATE]"/>
+  <Item id="77" value="Santa Fe[NEGATIVO]"/>
+  <Item id="78" value="Santa Fe[POSITIVO]"/>
+  <Item id="79" value="Santiago del Estero[AUSENTE]"/>
+  <Item id="80" value="Santiago del Estero[EMPATE]"/>
+  <Item id="81" value="Santiago del Estero[NEGATIVO]"/>
+  <Item id="82" value="Santiago del Estero[POSITIVO]"/>
+  <Item id="83" value="Tierra del Fuego[ABSTENCION]"/>
+  <Item id="84" value="Tierra del Fuego[EMPATE]"/>
+  <Item id="85" value="Tierra del Fuego[NEGATIVO]"/>
+  <Item id="86" value="Tierra del Fuego[POSITIVO]"/>
+  <Item id="87" value="Tucuman[ABSTENCION]"/>
+  <Item id="88" value="Tucuman[EMPATE]"/>
+  <Item id="89" value="Tucuman[NEGATIVO]"/>
+  <Item id="90" value="Tucuman[POSITIVO]"/>
+  <Itemset id="1" numberOfItems="1">
+   <ItemRef itemRef="82"/>
+  </Itemset>
+  <Itemset id="2" numberOfItems="2">
+   <ItemRef itemRef="61"/>
+   <ItemRef itemRef="66"/>
+  </Itemset>
+  <Itemset id="3" numberOfItems="2">
+   <ItemRef itemRef="12"/>
+   <ItemRef itemRef="90"/>
+  </Itemset>
+  <Itemset id="4" numberOfItems="2">
+   <ItemRef itemRef="12"/>
+   <ItemRef itemRef="49"/>
+  </Itemset>
+  <Itemset id="5" numberOfItems="2">
+   <ItemRef itemRef="12"/>
+   <ItemRef itemRef="66"/>
+  </Itemset>
+  <Itemset id="6" numberOfItems="2">
+   <ItemRef itemRef="12"/>
+   <ItemRef itemRef="38"/>
+  </Itemset>
+  <Itemset id="7" numberOfItems="2">
+   <ItemRef itemRef="82"/>
+   <ItemRef itemRef="90"/>
+  </Itemset>
+  <Itemset id="8" numberOfItems="2">
+   <ItemRef itemRef="66"/>
+   <ItemRef itemRef="82"/>
+  </Itemset>
+  <Itemset id="9" numberOfItems="2">
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="82"/>
+  </Itemset>
+  <Itemset id="10" numberOfItems="2">
+   <ItemRef itemRef="78"/>
+   <ItemRef itemRef="90"/>
+  </Itemset>
+  <Itemset id="11" numberOfItems="2">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="38"/>
+  </Itemset>
+  <Itemset id="12" numberOfItems="2">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="66"/>
+  </Itemset>
+  <Itemset id="13" numberOfItems="2">
+   <ItemRef itemRef="18"/>
+   <ItemRef itemRef="38"/>
+  </Itemset>
+  <Itemset id="14" numberOfItems="2">
+   <ItemRef itemRef="8"/>
+   <ItemRef itemRef="30"/>
+  </Itemset>
+  <Itemset id="15" numberOfItems="2">
+   <ItemRef itemRef="8"/>
+   <ItemRef itemRef="49"/>
+  </Itemset>
+  <Itemset id="16" numberOfItems="2">
+   <ItemRef itemRef="8"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="17" numberOfItems="2">
+   <ItemRef itemRef="71"/>
+   <ItemRef itemRef="90"/>
+  </Itemset>
+  <Itemset id="18" numberOfItems="3">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="18"/>
+   <ItemRef itemRef="25"/>
+  </Itemset>
+  <Itemset id="19" numberOfItems="3">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="25"/>
+   <ItemRef itemRef="44"/>
+  </Itemset>
+  <Itemset id="20" numberOfItems="3">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="25"/>
+  </Itemset>
+  <Itemset id="21" numberOfItems="3">
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="66"/>
+   <ItemRef itemRef="78"/>
+  </Itemset>
+  <Itemset id="22" numberOfItems="3">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="18"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="23" numberOfItems="3">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="44"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="24" numberOfItems="3">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="25" numberOfItems="3">
+   <ItemRef itemRef="18"/>
+   <ItemRef itemRef="44"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="26" numberOfItems="3">
+   <ItemRef itemRef="8"/>
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="66"/>
+  </Itemset>
+  <Itemset id="27" numberOfItems="3">
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="49"/>
+   <ItemRef itemRef="90"/>
+  </Itemset>
+  <Itemset id="28" numberOfItems="4">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="18"/>
+   <ItemRef itemRef="25"/>
+   <ItemRef itemRef="44"/>
+  </Itemset>
+  <Itemset id="29" numberOfItems="4">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="18"/>
+   <ItemRef itemRef="30"/>
+   <ItemRef itemRef="44"/>
+  </Itemset>
+  <Itemset id="30" numberOfItems="4">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="18"/>
+   <ItemRef itemRef="44"/>
+  </Itemset>
+  <Itemset id="31" numberOfItems="4">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="18"/>
+   <ItemRef itemRef="44"/>
+   <ItemRef itemRef="66"/>
+  </Itemset>
+  <Itemset id="32" numberOfItems="4">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="18"/>
+   <ItemRef itemRef="66"/>
+  </Itemset>
+  <Itemset id="33" numberOfItems="4">
+   <ItemRef itemRef="3"/>
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="44"/>
+   <ItemRef itemRef="66"/>
+  </Itemset>
+  <Itemset id="34" numberOfItems="4">
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="30"/>
+   <ItemRef itemRef="86"/>
+   <ItemRef itemRef="90"/>
+  </Itemset>
+  <Itemset id="35" numberOfItems="4">
+   <ItemRef itemRef="30"/>
+   <ItemRef itemRef="66"/>
+   <ItemRef itemRef="86"/>
+   <ItemRef itemRef="90"/>
+  </Itemset>
+  <Itemset id="36" numberOfItems="4">
+   <ItemRef itemRef="30"/>
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="86"/>
+   <ItemRef itemRef="90"/>
+  </Itemset>
+  <Itemset id="37" numberOfItems="4">
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="49"/>
+   <ItemRef itemRef="66"/>
+   <ItemRef itemRef="90"/>
+  </Itemset>
+  <Itemset id="38" numberOfItems="4">
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="66"/>
+   <ItemRef itemRef="90"/>
+  </Itemset>
+  <Itemset id="39" numberOfItems="4">
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="49"/>
+   <ItemRef itemRef="71"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="40" numberOfItems="4">
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="49"/>
+   <ItemRef itemRef="71"/>
+  </Itemset>
+  <Itemset id="41" numberOfItems="4">
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="30"/>
+   <ItemRef itemRef="49"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="42" numberOfItems="5">
+   <ItemRef itemRef="30"/>
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="49"/>
+   <ItemRef itemRef="71"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="43" numberOfItems="5">
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="49"/>
+   <ItemRef itemRef="66"/>
+   <ItemRef itemRef="71"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="44" numberOfItems="5">
+   <ItemRef itemRef="30"/>
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="49"/>
+   <ItemRef itemRef="66"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="45" numberOfItems="5">
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="49"/>
+   <ItemRef itemRef="66"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="46" numberOfItems="6">
+   <ItemRef itemRef="16"/>
+   <ItemRef itemRef="30"/>
+   <ItemRef itemRef="38"/>
+   <ItemRef itemRef="66"/>
+   <ItemRef itemRef="71"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="47" numberOfItems="1">
+   <ItemRef itemRef="49"/>
+  </Itemset>
+  <Itemset id="48" numberOfItems="1">
+   <ItemRef itemRef="38"/>
+  </Itemset>
+  <Itemset id="49" numberOfItems="1">
+   <ItemRef itemRef="2"/>
+  </Itemset>
+  <Itemset id="50" numberOfItems="1">
+   <ItemRef itemRef="66"/>
+  </Itemset>
+  <Itemset id="51" numberOfItems="1">
+   <ItemRef itemRef="18"/>
+  </Itemset>
+  <Itemset id="52" numberOfItems="1">
+   <ItemRef itemRef="44"/>
+  </Itemset>
+  <Itemset id="53" numberOfItems="1">
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="54" numberOfItems="1">
+   <ItemRef itemRef="16"/>
+  </Itemset>
+  <AssociationRule support="0.5" confidence="0.857142857142857" lift="1.12207792207792" antecedent="1" consequent="47"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.10016977928693" antecedent="2" consequent="48"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.08270676691729" antecedent="2" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.27371007371007" antecedent="3" consequent="47"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="3" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.13684210526316" antecedent="4" consequent="50"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.10016977928693" antecedent="4" consequent="48"/>
+  <AssociationRule support="0.513888888888889" confidence="0.973684210526316" lift="1.11278195488722" antecedent="4" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.12990409764603" antecedent="5" consequent="48"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="5" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.08270676691729" antecedent="6" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.12990409764603" antecedent="7" consequent="48"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="7" consequent="49"/>
+  <AssociationRule support="0.513888888888889" confidence="1" lift="1.16129032258065" antecedent="8" consequent="48"/>
+  <AssociationRule support="0.513888888888889" confidence="0.902439024390244" lift="1.03135888501742" antecedent="9" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="10" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.55675675675676" antecedent="11" consequent="51"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.55675675675676" antecedent="11" consequent="52"/>
+  <AssociationRule support="0.5" confidence="0.9" lift="1.04516129032258" antecedent="12" consequent="48"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.55675675675676" antecedent="13" consequent="52"/>
+  <AssociationRule support="0.513888888888889" confidence="1" lift="1.26315789473684" antecedent="14" consequent="53"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.13684210526316" antecedent="15" consequent="50"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.10016977928693" antecedent="15" consequent="48"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.08270676691729" antecedent="15" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.13684210526316" antecedent="16" consequent="50"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.08270676691729" antecedent="16" consequent="49"/>
+  <AssociationRule support="0.5" confidence="1" lift="1.14285714285714" antecedent="17" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.878048780487805" lift="1.05365853658537" antecedent="18" consequent="50"/>
+  <AssociationRule support="0.5" confidence="0.878048780487805" lift="1.00348432055749" antecedent="18" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.878048780487805" lift="1.05365853658537" antecedent="19" consequent="50"/>
+  <AssociationRule support="0.5" confidence="0.878048780487805" lift="1.00348432055749" antecedent="19" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.08270676691729" antecedent="20" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="21" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.9" lift="1.08" antecedent="22" consequent="50"/>
+  <AssociationRule support="0.5" confidence="0.9" lift="1.02857142857143" antecedent="22" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.9" lift="1.08" antecedent="23" consequent="50"/>
+  <AssociationRule support="0.5" confidence="0.9" lift="1.02857142857143" antecedent="23" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.08270676691729" antecedent="24" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.9" lift="1.02857142857143" antecedent="25" consequent="49"/>
+  <AssociationRule support="0.513888888888889" confidence="0.925" lift="1.05714285714286" antecedent="26" consequent="49"/>
+  <AssociationRule support="0.5" confidence="1" lift="1.14285714285714" antecedent="27" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.9" lift="1.17818181818182" antecedent="28" consequent="54"/>
+  <AssociationRule support="0.5" confidence="0.9" lift="1.13684210526316" antecedent="28" consequent="53"/>
+  <AssociationRule support="0.5" confidence="1" lift="1.26315789473684" antecedent="29" consequent="53"/>
+  <AssociationRule support="0.5" confidence="0.923076923076923" lift="1.16599190283401" antecedent="30" consequent="53"/>
+  <AssociationRule support="0.5" confidence="0.923076923076923" lift="1.10769230769231" antecedent="30" consequent="50"/>
+  <AssociationRule support="0.513888888888889" confidence="0.948717948717949" lift="1.08424908424908" antecedent="30" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.947368421052632" lift="1.08270676691729" antecedent="31" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="32" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="33" consequent="49"/>
+  <AssociationRule support="0.5" confidence="1" lift="1.14285714285714" antecedent="34" consequent="49"/>
+  <AssociationRule support="0.513888888888889" confidence="1" lift="1.14285714285714" antecedent="35" consequent="49"/>
+  <AssociationRule support="0.5" confidence="1" lift="1.14285714285714" antecedent="36" consequent="49"/>
+  <AssociationRule support="0.555555555555556" confidence="0.975609756097561" lift="1.11498257839721" antecedent="37" consequent="49"/>
+  <AssociationRule support="0.5" confidence="1" lift="1.14285714285714" antecedent="38" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.12990409764603" antecedent="39" consequent="48"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="39" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="40" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.923076923076923" lift="1.10769230769231" antecedent="41" consequent="50"/>
+  <AssociationRule support="0.513888888888889" confidence="0.948717948717949" lift="1.10173697270471" antecedent="41" consequent="48"/>
+  <AssociationRule support="0.513888888888889" confidence="0.948717948717949" lift="1.08424908424908" antecedent="41" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="42" consequent="49"/>
+  <AssociationRule support="0.513888888888889" confidence="1" lift="1.14285714285714" antecedent="43" consequent="49"/>
+  <AssociationRule support="0.513888888888889" confidence="0.973684210526316" lift="1.11278195488722" antecedent="44" consequent="49"/>
+  <AssociationRule support="0.5" confidence="0.972972972972973" lift="1.11196911196911" antecedent="45" consequent="49"/>
+  <AssociationRule support="0.5" confidence="1" lift="1.14285714285714" antecedent="46" consequent="49"/>
+ </AssociationModel>
+</PMML>

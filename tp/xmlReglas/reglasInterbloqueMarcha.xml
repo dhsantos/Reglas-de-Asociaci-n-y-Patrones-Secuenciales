@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2018 diego" description="arules association rules model">
+  <Extension name="user" value="diego" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2018-10-08 02:51:44</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="2">
+  <DataField name="transaction" optype="categorical" dataType="string"/>
+  <DataField name="item" optype="categorical" dataType="string"/>
+ </DataDictionary>
+ <AssociationModel functionName="associationRules" numberOfTransactions="72" numberOfItems="9" minimumSupport="0.05" minimumConfidence="0.8" numberOfItemsets="4" numberOfRules="2">
+  <MiningSchema>
+   <MiningField name="transaction" usageType="group"/>
+   <MiningField name="item" usageType="active"/>
+  </MiningSchema>
+  <Item id="1" value="Libres del Sur[ABSTENCION]"/>
+  <Item id="2" value="Libres del Sur[AUSENTE]"/>
+  <Item id="3" value="Libres del Sur[NEGATIVO]"/>
+  <Item id="4" value="Libres del Sur[POSITIVO]"/>
+  <Item id="5" value="Peronismo para la Victoria[ABSTENCION]"/>
+  <Item id="6" value="Peronismo para la Victoria[AUSENTE]"/>
+  <Item id="7" value="Peronismo para la Victoria[EMPATE]"/>
+  <Item id="8" value="Peronismo para la Victoria[NEGATIVO]"/>
+  <Item id="9" value="Peronismo para la Victoria[POSITIVO]"/>
+  <Itemset id="1" numberOfItems="1">
+   <ItemRef itemRef="6"/>
+  </Itemset>
+  <Itemset id="2" numberOfItems="1">
+   <ItemRef itemRef="4"/>
+  </Itemset>
+  <Itemset id="3" numberOfItems="1">
+   <ItemRef itemRef="2"/>
+  </Itemset>
+  <Itemset id="4" numberOfItems="1">
+   <ItemRef itemRef="9"/>
+  </Itemset>
+  <AssociationRule support="0.0555555555555556" confidence="0.8" lift="1.64571428571429" antecedent="1" consequent="3"/>
+  <AssociationRule support="0.402777777777778" confidence="0.878787878787879" lift="1.34622823984526" antecedent="2" consequent="4"/>
+ </AssociationModel>
+</PMML>

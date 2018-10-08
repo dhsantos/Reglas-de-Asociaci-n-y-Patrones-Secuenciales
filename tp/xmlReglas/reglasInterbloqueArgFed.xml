@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2018 diego" description="arules association rules model">
+  <Extension name="user" value="diego" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2018-10-08 03:22:47</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="2">
+  <DataField name="transaction" optype="categorical" dataType="string"/>
+  <DataField name="item" optype="categorical" dataType="string"/>
+ </DataDictionary>
+ <AssociationModel functionName="associationRules" numberOfTransactions="72" numberOfItems="30" minimumSupport="0.15" minimumConfidence="0.8" numberOfItemsets="2" numberOfRules="1">
+  <MiningSchema>
+   <MiningField name="transaction" usageType="group"/>
+   <MiningField name="item" usageType="active"/>
+  </MiningSchema>
+  <Item id="1" value="Cordoba Federal[AUSENTE]"/>
+  <Item id="2" value="Cordoba Federal[EMPATE]"/>
+  <Item id="3" value="Cordoba Federal[NEGATIVO]"/>
+  <Item id="4" value="Cordoba Federal[POSITIVO]"/>
+  <Item id="5" value="Frente de la Concordia Misionero[AUSENTE]"/>
+  <Item id="6" value="Frente de la Concordia Misionero[EMPATE]"/>
+  <Item id="7" value="Frente de la Concordia Misionero[NEGATIVO]"/>
+  <Item id="8" value="Frente de la Concordia Misionero[POSITIVO]"/>
+  <Item id="9" value="Justicialista[ABSTENCION]"/>
+  <Item id="10" value="Justicialista[AUSENTE]"/>
+  <Item id="11" value="Justicialista[EMPATE]"/>
+  <Item id="12" value="Justicialista[NEGATIVO]"/>
+  <Item id="13" value="Justicialista por Tucuman[ABSTENCION]"/>
+  <Item id="14" value="Justicialista por Tucuman[AUSENTE]"/>
+  <Item id="15" value="Justicialista por Tucuman[EMPATE]"/>
+  <Item id="16" value="Justicialista por Tucuman[NEGATIVO]"/>
+  <Item id="17" value="Justicialista por Tucuman[POSITIVO]"/>
+  <Item id="18" value="Justicialista[POSITIVO]"/>
+  <Item id="19" value="Partido Bloquista de San Juan[ABSTENCION]"/>
+  <Item id="20" value="Partido Bloquista de San Juan[AUSENTE]"/>
+  <Item id="21" value="Partido Bloquista de San Juan[NEGATIVO]"/>
+  <Item id="22" value="Partido Bloquista de San Juan[POSITIVO]"/>
+  <Item id="23" value="Somos San Juan[ABSTENCION]"/>
+  <Item id="24" value="Somos San Juan[AUSENTE]"/>
+  <Item id="25" value="Somos San Juan[NEGATIVO]"/>
+  <Item id="26" value="Somos San Juan[POSITIVO]"/>
+  <Item id="27" value="Todos Juntos por San Juan[ABSTENCION]"/>
+  <Item id="28" value="Todos Juntos por San Juan[AUSENTE]"/>
+  <Item id="29" value="Todos Juntos por San Juan[NEGATIVO]"/>
+  <Item id="30" value="Todos Juntos por San Juan[POSITIVO]"/>
+  <Itemset id="1" numberOfItems="6">
+   <ItemRef itemRef="4"/>
+   <ItemRef itemRef="8"/>
+   <ItemRef itemRef="17"/>
+   <ItemRef itemRef="22"/>
+   <ItemRef itemRef="26"/>
+   <ItemRef itemRef="30"/>
+  </Itemset>
+  <Itemset id="2" numberOfItems="1">
+   <ItemRef itemRef="18"/>
+  </Itemset>
+  <AssociationRule support="0.208333333333333" confidence="1" lift="1.2" antecedent="1" consequent="2"/>
+ </AssociationModel>
+</PMML>

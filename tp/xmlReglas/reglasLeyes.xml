@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2018 diego" description="arules association rules model">
+  <Extension name="user" value="diego" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2018-10-08 00:40:35</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="2">
+  <DataField name="transaction" optype="categorical" dataType="string"/>
+  <DataField name="item" optype="categorical" dataType="string"/>
+ </DataDictionary>
+ <AssociationModel functionName="associationRules" numberOfTransactions="72" numberOfItems="292" minimumSupport="0.4" minimumConfidence="0.9" numberOfItemsets="3" numberOfRules="2">
+  <MiningSchema>
+   <MiningField name="transaction" usageType="group"/>
+   <MiningField name="item" usageType="active"/>
+  </MiningSchema>
+  <Item id="1" value="136-10-1"/>
+  <Item id="2" value="136-10-10"/>
+  <Item id="3" value="136-10-11"/>
+  <Item id="4" value="136-10-12"/>
+  <Item id="5" value="136-10-13"/>
+  <Item id="6" value="136-10-14"/>
+  <Item id="7" value="136-10-15"/>
+  <Item id="8" value="136-10-16"/>
+  <Item id="9" value="136-10-17"/>
+  <Item id="10" value="136-10-18"/>
+  <Item id="11" value="136-10-19"/>
+  <Item id="12" value="136-10-2"/>
+  <Item id="13" value="136-10-20"/>
+  <Item id="14" value="136-10-21"/>
+  <Item id="15" value="136-10-22"/>
+  <Item id="16" value="136-10-23"/>
+  <Item id="17" value="136-10-24"/>
+  <Item id="18" value="136-10-25"/>
+  <Item id="19" value="136-10-26"/>
+  <Item id="20" value="136-10-3"/>
+  <Item id="21" value="136-10-4"/>
+  <Item id="22" value="136-10-5"/>
+  <Item id="23" value="136-10-6"/>
+  <Item id="24" value="136-10-7"/>
+  <Item id="25" value="136-10-8"/>
+  <Item id="26" value="136-10-9"/>
+  <Item id="27" value="136-2-10"/>
+  <Item id="28" value="136-2-2"/>
+  <Item id="29" value="136-2-3"/>
+  <Item id="30" value="136-2-4"/>
+  <Item id="31" value="136-2-5"/>
+  <Item id="32" value="136-2-6"/>
+  <Item id="33" value="136-2-7"/>
+  <Item id="34" value="136-2-8"/>
+  <Item id="35" value="136-2-9"/>
+  <Item id="36" value="136-4-1"/>
+  <Item id="37" value="136-4-10"/>
+  <Item id="38" value="136-4-11"/>
+  <Item id="39" value="136-4-12"/>
+  <Item id="40" value="136-4-13"/>
+  <Item id="41" value="136-4-14"/>
+  <Item id="42" value="136-4-15"/>
+  <Item id="43" value="136-4-16"/>
+  <Item id="44" value="136-4-17"/>
+  <Item id="45" value="136-4-18"/>
+  <Item id="46" value="136-4-19"/>
+  <Item id="47" value="136-4-2"/>
+  <Item id="48" value="136-4-20"/>
+  <Item id="49" value="136-4-21"/>
+  <Item id="50" value="136-4-22"/>
+  <Item id="51" value="136-4-23"/>
+  <Item id="52" value="136-4-24"/>
+  <Item id="53" value="136-4-25"/>
+  <Item id="54" value="136-4-26"/>
+  <Item id="55" value="136-4-27"/>
+  <Item id="56" value="136-4-28"/>
+  <Item id="57" value="136-4-29"/>
+  <Item id="58" value="136-4-3"/>
+  <Item id="59" value="136-4-30"/>
+  <Item id="60" value="136-4-4"/>
+  <Item id="61" value="136-4-5"/>
+  <Item id="62" value="136-4-6"/>
+  <Item id="63" value="136-4-7"/>
+  <Item id="64" value="136-4-8"/>
+  <Item id="65" value="136-4-9"/>
+  <Item id="66" value="136-5-1"/>
+  <Item id="67" value="136-5-2"/>
+  <Item id="68" value="136-5-3"/>
+  <Item id="69" value="136-5-4"/>
+  <Item id="70" value="136-6-1"/>
+  <Item id="71" value="136-6-2"/>
+  <Item id="72" value="136-8-1"/>
+  <Item id="73" value="Buenos Aires[NEGATIVO]"/>
+  <Item id="74" value="Buenos Aires[POSITIVO]"/>
+  <Item id="75" value="C.A.B.A.[NEGATIVO]"/>
+  <Item id="76" value="C.A.B.A.[POSITIVO]"/>
+  <Item id="77" value="Catamarca[AUSENTE]"/>
+  <Item id="78" value="Catamarca[EMPATE]"/>
+  <Item id="79" value="Catamarca[NEGATIVO]"/>
+  <Item id="80" value="Catamarca[POSITIVO]"/>
+  <Item id="81" value="Chaco[AUSENTE]"/>
+  <Item id="82" value="Chaco[EMPATE]"/>
+  <Item id="83" value="Chaco[NEGATIVO]"/>
+  <Item id="84" value="Chaco[POSITIVO]"/>
+  <Item id="85" value="Chubut[AUSENTE]"/>
+  <Item id="86" value="Chubut[EMPATE]"/>
+  <Item id="87" value="Chubut[NEGATIVO]"/>
+  <Item id="88" value="Chubut[POSITIVO]"/>
+  <Item id="89" value="Coalicion Civica[AUSENTE]"/>
+  <Item id="90" value="Coalicion Civica[NEGATIVO]"/>
+  <Item id="91" value="Coalicion Civica[POSITIVO]"/>
+  <Item id="92" value="Concertacion FORJA[ABSTENCION]"/>
+  <Item id="93" value="Concertacion FORJA[AUSENTE]"/>
+  <Item id="94" value="Concertacion FORJA[NEGATIVO]"/>
+  <Item id="95" value="Concertacion FORJA[POSITIVO]"/>
+  <Item id="96" value="Cordoba[AUSENTE]"/>
+  <Item id="97" value="Cordoba Federal[AUSENTE]"/>
+  <Item id="98" value="Cordoba Federal[EMPATE]"/>
+  <Item id="99" value="Cordoba Federal[NEGATIVO]"/>
+  <Item id="100" value="Cordoba Federal[POSITIVO]"/>
+  <Item id="101" value="Cordoba[NEGATIVO]"/>
+  <Item id="102" value="Cordoba[POSITIVO]"/>
+  <Item id="103" value="Cordoba Trabajo y Produccion[ABSTENCION]"/>
+  <Item id="104" value="Cordoba Trabajo y Produccion[AUSENTE]"/>
+  <Item id="105" value="Cordoba Trabajo y Produccion[NEGATIVO]"/>
+  <Item id="106" value="Cordoba Trabajo y Produccion[POSITIVO]"/>
+  <Item id="107" value="Corrientes[AUSENTE]"/>
+  <Item id="108" value="Corrientes[EMPATE]"/>
+  <Item id="109" value="Corrientes[NEGATIVO]"/>
+  <Item id="110" value="Corrientes[POSITIVO]"/>
+  <Item id="111" value="Cultura Educacion y Trabajo[ABSTENCION]"/>
+  <Item id="112" value="Cultura Educacion y Trabajo[AUSENTE]"/>
+  <Item id="113" value="Cultura Educacion y Trabajo[NEGATIVO]"/>
+  <Item id="114" value="Cultura Educacion y Trabajo[POSITIVO]"/>
+  <Item id="115" value="Elijo Catamarca[AUSENTE]"/>
+  <Item id="116" value="Elijo Catamarca[EMPATE]"/>
+  <Item id="117" value="Elijo Catamarca[NEGATIVO]"/>
+  <Item id="118" value="Elijo Catamarca[POSITIVO]"/>
+  <Item id="119" value="Entre Rios[EMPATE]"/>
+  <Item id="120" value="Entre Rios[NEGATIVO]"/>
+  <Item id="121" value="Entre Rios[POSITIVO]"/>
+  <Item id="122" value="Evolucion Radical[ABSTENCION]"/>
+  <Item id="123" value="Evolucion Radical[AUSENTE]"/>
+  <Item id="124" value="Evolucion Radical[EMPATE]"/>
+  <Item id="125" value="Evolucion Radical[NEGATIVO]"/>
+  <Item id="126" value="Evolucion Radical[POSITIVO]"/>
+  <Item id="127" value="Federal Unidos por una Nueva Argentina[ABSTENCION]"/>
+  <Item id="128" value="Federal Unidos por una Nueva Argentina[AUSENTE]"/>
+  <Item id="129" value="Federal Unidos por una Nueva Argentina[EMPATE]"/>
+  <Item id="130" value="Federal Unidos por una Nueva Argentina[NEGATIVO]"/>
+  <Item id="131" value="Federal Unidos por una Nueva Argentina[POSITIVO]"/>
+  <Item id="132" value="Formosa[ABSTENCION]"/>
+  <Item id="133" value="Formosa[EMPATE]"/>
+  <Item id="134" value="Formosa[NEGATIVO]"/>
+  <Item id="135" value="Formosa[POSITIVO]"/>
+  <Item id="136" value="Frente Civico por Santiago[AUSENTE]"/>
+  <Item id="137" value="Frente Civico por Santiago[EMPATE]"/>
+  <Item id="138" value="Frente Civico por Santiago[NEGATIVO]"/>
+  <Item id="139" value="Frente Civico por Santiago[POSITIVO]"/>
+  <Item id="140" value="Frente de la Concordia Misionero[AUSENTE]"/>
+  <Item id="141" value="Frente de la Concordia Misionero[EMPATE]"/>
+  <Item id="142" value="Frente de la Concordia Misionero[NEGATIVO]"/>
+  <Item id="143" value="Frente de la Concordia Misionero[POSITIVO]"/>
+  <Item id="144" value="Frente para la Victoria - PJ[ABSTENCION]"/>
+  <Item id="145" value="Frente para la Victoria - PJ[AUSENTE]"/>
+  <Item id="146" value="Frente para la Victoria - PJ[NEGATIVO]"/>
+  <Item id="147" value="Frente para la Victoria - PJ[POSITIVO]"/>
+  <Item id="148" value="Fte. Civico y Social de Catamarca[AUSENTE]"/>
+  <Item id="149" value="Fte. Civico y Social de Catamarca[NEGATIVO]"/>
+  <Item id="150" value="Fte. Civico y Social de Catamarca[POSITIVO]"/>
+  <Item id="151" value="Fte. de Izquierda y de los Trabajadores[ABSTENCION]"/>
+  <Item id="152" value="Fte. de Izquierda y de los Trabajadores[AUSENTE]"/>
+  <Item id="153" value="Fte. de Izquierda y de los Trabajadores[NEGATIVO]"/>
+  <Item id="154" value="Fte. de Izquierda y de los Trabajadores[POSITIVO]"/>
+  <Item id="155" value="Jujuy[EMPATE]"/>
+  <Item id="156" value="Jujuy[NEGATIVO]"/>
+  <Item id="157" value="Jujuy[POSITIVO]"/>
+  <Item id="158" value="Justicialista[ABSTENCION]"/>
+  <Item id="159" value="Justicialista[AUSENTE]"/>
+  <Item id="160" value="Justicialista[EMPATE]"/>
+  <Item id="161" value="Justicialista[NEGATIVO]"/>
+  <Item id="162" value="Justicialista por Tucuman[ABSTENCION]"/>
+  <Item id="163" value="Justicialista por Tucuman[AUSENTE]"/>
+  <Item id="164" value="Justicialista por Tucuman[EMPATE]"/>
+  <Item id="165" value="Justicialista por Tucuman[NEGATIVO]"/>
+  <Item id="166" value="Justicialista por Tucuman[POSITIVO]"/>
+  <Item id="167" value="Justicialista[POSITIVO]"/>
+  <Item id="168" value="La Pampa[ABSTENCION]"/>
+  <Item id="169" value="La Pampa[AUSENTE]"/>
+  <Item id="170" value="La Pampa[EMPATE]"/>
+  <Item id="171" value="La Pampa[NEGATIVO]"/>
+  <Item id="172" value="La Pampa[POSITIVO]"/>
+  <Item id="173" value="La Rioja[AUSENTE]"/>
+  <Item id="174" value="La Rioja[EMPATE]"/>
+  <Item id="175" value="La Rioja[NEGATIVO]"/>
+  <Item id="176" value="La Rioja[POSITIVO]"/>
+  <Item id="177" value="LEY_APROBADA"/>
+  <Item id="178" value="LEY_RECHAZADA"/>
+  <Item id="179" value="Libres del Sur[ABSTENCION]"/>
+  <Item id="180" value="Libres del Sur[AUSENTE]"/>
+  <Item id="181" value="Libres del Sur[NEGATIVO]"/>
+  <Item id="182" value="Libres del Sur[POSITIVO]"/>
+  <Item id="183" value="Mendoza[EMPATE]"/>
+  <Item id="184" value="Mendoza[NEGATIVO]"/>
+  <Item id="185" value="Mendoza[POSITIVO]"/>
+  <Item id="186" value="Misiones[AUSENTE]"/>
+  <Item id="187" value="Misiones[EMPATE]"/>
+  <Item id="188" value="Misiones[NEGATIVO]"/>
+  <Item id="189" value="Misiones[POSITIVO]"/>
+  <Item id="190" value="Movimiento Popular Neuquino[AUSENTE]"/>
+  <Item id="191" value="Movimiento Popular Neuquino[NEGATIVO]"/>
+  <Item id="192" value="Movimiento Popular Neuquino[POSITIVO]"/>
+  <Item id="193" value="Neuquen[AUSENTE]"/>
+  <Item id="194" value="Neuquen[EMPATE]"/>
+  <Item id="195" value="Neuquen[NEGATIVO]"/>
+  <Item id="196" value="Neuquen[POSITIVO]"/>
+  <Item id="197" value="Nuevo Espacio Santafesino[ABSTENCION]"/>
+  <Item id="198" value="Nuevo Espacio Santafesino[AUSENTE]"/>
+  <Item id="199" value="Nuevo Espacio Santafesino[NEGATIVO]"/>
+  <Item id="200" value="Nuevo Espacio Santafesino[POSITIVO]"/>
+  <Item id="201" value="Partido Bloquista de San Juan[ABSTENCION]"/>
+  <Item id="202" value="Partido Bloquista de San Juan[AUSENTE]"/>
+  <Item id="203" value="Partido Bloquista de San Juan[NEGATIVO]"/>
+  <Item id="204" value="Partido Bloquista de San Juan[POSITIVO]"/>
+  <Item id="205" value="Partido Intransigente de Mendoza[ABSTENCION]"/>
+  <Item id="206" value="Partido Intransigente de Mendoza[NEGATIVO]"/>
+  <Item id="207" value="Partido Intransigente de Mendoza[POSITIVO]"/>
+  <Item id="208" value="Partido por la Justicia Social[AUSENTE]"/>
+  <Item id="209" value="Partido por la Justicia Social[NEGATIVO]"/>
+  <Item id="210" value="Partido por la Justicia Social[POSITIVO]"/>
+  <Item id="211" value="Partido Socialista[AUSENTE]"/>
+  <Item id="212" value="Partido Socialista[NEGATIVO]"/>
+  <Item id="213" value="Partido Socialista[POSITIVO]"/>
+  <Item id="214" value="Peronismo para la Victoria[ABSTENCION]"/>
+  <Item id="215" value="Peronismo para la Victoria[AUSENTE]"/>
+  <Item id="216" value="Peronismo para la Victoria[EMPATE]"/>
+  <Item id="217" value="Peronismo para la Victoria[NEGATIVO]"/>
+  <Item id="218" value="Peronismo para la Victoria[POSITIVO]"/>
+  <Item id="219" value="Primero Argentina[ABSTENCION]"/>
+  <Item id="220" value="Primero Argentina[AUSENTE]"/>
+  <Item id="221" value="Primero Argentina[NEGATIVO]"/>
+  <Item id="222" value="Primero Argentina[POSITIVO]"/>
+  <Item id="223" value="PRO[NEGATIVO]"/>
+  <Item id="224" value="PRO[POSITIVO]"/>
+  <Item id="225" value="PTS - Frente de Izquierda[ABSTENCION]"/>
+  <Item id="226" value="PTS - Frente de Izquierda[AUSENTE]"/>
+  <Item id="227" value="PTS - Frente de Izquierda[EMPATE]"/>
+  <Item id="228" value="PTS - Frente de Izquierda[NEGATIVO]"/>
+  <Item id="229" value="PTS - Frente de Izquierda[POSITIVO]"/>
+  <Item id="230" value="Rio Negro[AUSENTE]"/>
+  <Item id="231" value="Rio Negro[EMPATE]"/>
+  <Item id="232" value="Rio Negro[NEGATIVO]"/>
+  <Item id="233" value="Rio Negro[POSITIVO]"/>
+  <Item id="234" value="Salta[AUSENTE]"/>
+  <Item id="235" value="Salta[EMPATE]"/>
+  <Item id="236" value="Salta[NEGATIVO]"/>
+  <Item id="237" value="Salta[POSITIVO]"/>
+  <Item id="238" value="Salta Somos Todos[AUSENTE]"/>
+  <Item id="239" value="Salta Somos Todos[NEGATIVO]"/>
+  <Item id="240" value="Salta Somos Todos[POSITIVO]"/>
+  <Item id="241" value="San Juan[ABSTENCION]"/>
+  <Item id="242" value="San Juan[AUSENTE]"/>
+  <Item id="243" value="San Juan[EMPATE]"/>
+  <Item id="244" value="San Juan[NEGATIVO]"/>
+  <Item id="245" value="San Juan[POSITIVO]"/>
+  <Item id="246" value="San Luis[ABSTENCION]"/>
+  <Item id="247" value="San Luis[AUSENTE]"/>
+  <Item id="248" value="San Luis[EMPATE]"/>
+  <Item id="249" value="San Luis[NEGATIVO]"/>
+  <Item id="250" value="San Luis[POSITIVO]"/>
+  <Item id="251" value="Santa Cruz[AUSENTE]"/>
+  <Item id="252" value="Santa Cruz[EMPATE]"/>
+  <Item id="253" value="Santa Cruz[NEGATIVO]"/>
+  <Item id="254" value="Santa Cruz[POSITIVO]"/>
+  <Item id="255" value="Santa Fe[EMPATE]"/>
+  <Item id="256" value="Santa Fe[NEGATIVO]"/>
+  <Item id="257" value="Santa Fe[POSITIVO]"/>
+  <Item id="258" value="Santiago del Estero[AUSENTE]"/>
+  <Item id="259" value="Santiago del Estero[EMPATE]"/>
+  <Item id="260" value="Santiago del Estero[NEGATIVO]"/>
+  <Item id="261" value="Santiago del Estero[POSITIVO]"/>
+  <Item id="262" value="Somos Mendoza[ABSTENCION]"/>
+  <Item id="263" value="Somos Mendoza[AUSENTE]"/>
+  <Item id="264" value="Somos Mendoza[NEGATIVO]"/>
+  <Item id="265" value="Somos Mendoza[POSITIVO]"/>
+  <Item id="266" value="Somos San Juan[ABSTENCION]"/>
+  <Item id="267" value="Somos San Juan[AUSENTE]"/>
+  <Item id="268" value="Somos San Juan[NEGATIVO]"/>
+  <Item id="269" value="Somos San Juan[POSITIVO]"/>
+  <Item id="270" value="Tierra del Fuego[ABSTENCION]"/>
+  <Item id="271" value="Tierra del Fuego[EMPATE]"/>
+  <Item id="272" value="Tierra del Fuego[NEGATIVO]"/>
+  <Item id="273" value="Tierra del Fuego[POSITIVO]"/>
+  <Item id="274" value="Todos Juntos por San Juan[ABSTENCION]"/>
+  <Item id="275" value="Todos Juntos por San Juan[AUSENTE]"/>
+  <Item id="276" value="Todos Juntos por San Juan[NEGATIVO]"/>
+  <Item id="277" value="Todos Juntos por San Juan[POSITIVO]"/>
+  <Item id="278" value="Trabajo y Dignidad[ABSTENCION]"/>
+  <Item id="279" value="Trabajo y Dignidad[AUSENTE]"/>
+  <Item id="280" value="Trabajo y Dignidad[NEGATIVO]"/>
+  <Item id="281" value="Trabajo y Dignidad[POSITIVO]"/>
+  <Item id="282" value="Tucuman[ABSTENCION]"/>
+  <Item id="283" value="Tucuman[EMPATE]"/>
+  <Item id="284" value="Tucuman[NEGATIVO]"/>
+  <Item id="285" value="Tucuman[POSITIVO]"/>
+  <Item id="286" value="Unidad Justicialista[ABSTENCION]"/>
+  <Item id="287" value="Unidad Justicialista[AUSENTE]"/>
+  <Item id="288" value="Unidad Justicialista[EMPATE]"/>
+  <Item id="289" value="Unidad Justicialista[NEGATIVO]"/>
+  <Item id="290" value="Unidad Justicialista[POSITIVO]"/>
+  <Item id="291" value="Union Civica Radical[NEGATIVO]"/>
+  <Item id="292" value="Union Civica Radical[POSITIVO]"/>
+  <Itemset id="1" numberOfItems="16">
+   <ItemRef itemRef="74"/>
+   <ItemRef itemRef="75"/>
+   <ItemRef itemRef="88"/>
+   <ItemRef itemRef="101"/>
+   <ItemRef itemRef="120"/>
+   <ItemRef itemRef="131"/>
+   <ItemRef itemRef="147"/>
+   <ItemRef itemRef="154"/>
+   <ItemRef itemRef="167"/>
+   <ItemRef itemRef="184"/>
+   <ItemRef itemRef="204"/>
+   <ItemRef itemRef="207"/>
+   <ItemRef itemRef="223"/>
+   <ItemRef itemRef="245"/>
+   <ItemRef itemRef="281"/>
+   <ItemRef itemRef="291"/>
+  </Itemset>
+  <Itemset id="2" numberOfItems="16">
+   <ItemRef itemRef="74"/>
+   <ItemRef itemRef="75"/>
+   <ItemRef itemRef="88"/>
+   <ItemRef itemRef="101"/>
+   <ItemRef itemRef="131"/>
+   <ItemRef itemRef="147"/>
+   <ItemRef itemRef="167"/>
+   <ItemRef itemRef="184"/>
+   <ItemRef itemRef="204"/>
+   <ItemRef itemRef="207"/>
+   <ItemRef itemRef="209"/>
+   <ItemRef itemRef="223"/>
+   <ItemRef itemRef="245"/>
+   <ItemRef itemRef="273"/>
+   <ItemRef itemRef="281"/>
+   <ItemRef itemRef="291"/>
+  </Itemset>
+  <Itemset id="3" numberOfItems="1">
+   <ItemRef itemRef="177"/>
+  </Itemset>
+  <AssociationRule support="0.402777777777778" confidence="0.966666666666667" lift="1.14098360655738" antecedent="1" consequent="3"/>
+  <AssociationRule support="0.402777777777778" confidence="0.966666666666667" lift="1.14098360655738" antecedent="2" consequent="3"/>
+ </AssociationModel>
+</PMML>

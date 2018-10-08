@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2018 diego" description="arules association rules model">
+  <Extension name="user" value="diego" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2018-10-08 03:06:46</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="2">
+  <DataField name="transaction" optype="categorical" dataType="string"/>
+  <DataField name="item" optype="categorical" dataType="string"/>
+ </DataDictionary>
+ <AssociationModel functionName="associationRules" numberOfTransactions="72" numberOfItems="128" minimumSupport="0.35" minimumConfidence="0.8" numberOfItemsets="9" numberOfRules="8">
+  <MiningSchema>
+   <MiningField name="transaction" usageType="group"/>
+   <MiningField name="item" usageType="active"/>
+  </MiningSchema>
+  <Item id="1" value="Coalicion Civica[AUSENTE]"/>
+  <Item id="2" value="Coalicion Civica[NEGATIVO]"/>
+  <Item id="3" value="Coalicion Civica[POSITIVO]"/>
+  <Item id="4" value="Concertacion FORJA[ABSTENCION]"/>
+  <Item id="5" value="Concertacion FORJA[AUSENTE]"/>
+  <Item id="6" value="Concertacion FORJA[NEGATIVO]"/>
+  <Item id="7" value="Concertacion FORJA[POSITIVO]"/>
+  <Item id="8" value="Cordoba Federal[AUSENTE]"/>
+  <Item id="9" value="Cordoba Federal[EMPATE]"/>
+  <Item id="10" value="Cordoba Federal[NEGATIVO]"/>
+  <Item id="11" value="Cordoba Federal[POSITIVO]"/>
+  <Item id="12" value="Cordoba Trabajo y Produccion[ABSTENCION]"/>
+  <Item id="13" value="Cordoba Trabajo y Produccion[AUSENTE]"/>
+  <Item id="14" value="Cordoba Trabajo y Produccion[NEGATIVO]"/>
+  <Item id="15" value="Cordoba Trabajo y Produccion[POSITIVO]"/>
+  <Item id="16" value="Cultura Educacion y Trabajo[ABSTENCION]"/>
+  <Item id="17" value="Cultura Educacion y Trabajo[AUSENTE]"/>
+  <Item id="18" value="Cultura Educacion y Trabajo[NEGATIVO]"/>
+  <Item id="19" value="Cultura Educacion y Trabajo[POSITIVO]"/>
+  <Item id="20" value="Elijo Catamarca[AUSENTE]"/>
+  <Item id="21" value="Elijo Catamarca[EMPATE]"/>
+  <Item id="22" value="Elijo Catamarca[NEGATIVO]"/>
+  <Item id="23" value="Elijo Catamarca[POSITIVO]"/>
+  <Item id="24" value="Evolucion Radical[ABSTENCION]"/>
+  <Item id="25" value="Evolucion Radical[AUSENTE]"/>
+  <Item id="26" value="Evolucion Radical[EMPATE]"/>
+  <Item id="27" value="Evolucion Radical[NEGATIVO]"/>
+  <Item id="28" value="Evolucion Radical[POSITIVO]"/>
+  <Item id="29" value="Federal Unidos por una Nueva Argentina[ABSTENCION]"/>
+  <Item id="30" value="Federal Unidos por una Nueva Argentina[AUSENTE]"/>
+  <Item id="31" value="Federal Unidos por una Nueva Argentina[EMPATE]"/>
+  <Item id="32" value="Federal Unidos por una Nueva Argentina[NEGATIVO]"/>
+  <Item id="33" value="Federal Unidos por una Nueva Argentina[POSITIVO]"/>
+  <Item id="34" value="Frente Civico por Santiago[AUSENTE]"/>
+  <Item id="35" value="Frente Civico por Santiago[EMPATE]"/>
+  <Item id="36" value="Frente Civico por Santiago[NEGATIVO]"/>
+  <Item id="37" value="Frente Civico por Santiago[POSITIVO]"/>
+  <Item id="38" value="Frente de la Concordia Misionero[AUSENTE]"/>
+  <Item id="39" value="Frente de la Concordia Misionero[EMPATE]"/>
+  <Item id="40" value="Frente de la Concordia Misionero[NEGATIVO]"/>
+  <Item id="41" value="Frente de la Concordia Misionero[POSITIVO]"/>
+  <Item id="42" value="Frente para la Victoria - PJ[ABSTENCION]"/>
+  <Item id="43" value="Frente para la Victoria - PJ[AUSENTE]"/>
+  <Item id="44" value="Frente para la Victoria - PJ[NEGATIVO]"/>
+  <Item id="45" value="Frente para la Victoria - PJ[POSITIVO]"/>
+  <Item id="46" value="Fte. Civico y Social de Catamarca[AUSENTE]"/>
+  <Item id="47" value="Fte. Civico y Social de Catamarca[NEGATIVO]"/>
+  <Item id="48" value="Fte. Civico y Social de Catamarca[POSITIVO]"/>
+  <Item id="49" value="Fte. de Izquierda y de los Trabajadores[ABSTENCION]"/>
+  <Item id="50" value="Fte. de Izquierda y de los Trabajadores[AUSENTE]"/>
+  <Item id="51" value="Fte. de Izquierda y de los Trabajadores[NEGATIVO]"/>
+  <Item id="52" value="Fte. de Izquierda y de los Trabajadores[POSITIVO]"/>
+  <Item id="53" value="Justicialista[ABSTENCION]"/>
+  <Item id="54" value="Justicialista[AUSENTE]"/>
+  <Item id="55" value="Justicialista[EMPATE]"/>
+  <Item id="56" value="Justicialista[NEGATIVO]"/>
+  <Item id="57" value="Justicialista por Tucuman[ABSTENCION]"/>
+  <Item id="58" value="Justicialista por Tucuman[AUSENTE]"/>
+  <Item id="59" value="Justicialista por Tucuman[EMPATE]"/>
+  <Item id="60" value="Justicialista por Tucuman[NEGATIVO]"/>
+  <Item id="61" value="Justicialista por Tucuman[POSITIVO]"/>
+  <Item id="62" value="Justicialista[POSITIVO]"/>
+  <Item id="63" value="Libres del Sur[ABSTENCION]"/>
+  <Item id="64" value="Libres del Sur[AUSENTE]"/>
+  <Item id="65" value="Libres del Sur[NEGATIVO]"/>
+  <Item id="66" value="Libres del Sur[POSITIVO]"/>
+  <Item id="67" value="Movimiento Popular Neuquino[AUSENTE]"/>
+  <Item id="68" value="Movimiento Popular Neuquino[NEGATIVO]"/>
+  <Item id="69" value="Movimiento Popular Neuquino[POSITIVO]"/>
+  <Item id="70" value="Nuevo Espacio Santafesino[ABSTENCION]"/>
+  <Item id="71" value="Nuevo Espacio Santafesino[AUSENTE]"/>
+  <Item id="72" value="Nuevo Espacio Santafesino[NEGATIVO]"/>
+  <Item id="73" value="Nuevo Espacio Santafesino[POSITIVO]"/>
+  <Item id="74" value="Partido Bloquista de San Juan[ABSTENCION]"/>
+  <Item id="75" value="Partido Bloquista de San Juan[AUSENTE]"/>
+  <Item id="76" value="Partido Bloquista de San Juan[NEGATIVO]"/>
+  <Item id="77" value="Partido Bloquista de San Juan[POSITIVO]"/>
+  <Item id="78" value="Partido Intransigente de Mendoza[ABSTENCION]"/>
+  <Item id="79" value="Partido Intransigente de Mendoza[NEGATIVO]"/>
+  <Item id="80" value="Partido Intransigente de Mendoza[POSITIVO]"/>
+  <Item id="81" value="Partido por la Justicia Social[AUSENTE]"/>
+  <Item id="82" value="Partido por la Justicia Social[NEGATIVO]"/>
+  <Item id="83" value="Partido por la Justicia Social[POSITIVO]"/>
+  <Item id="84" value="Partido Socialista[AUSENTE]"/>
+  <Item id="85" value="Partido Socialista[NEGATIVO]"/>
+  <Item id="86" value="Partido Socialista[POSITIVO]"/>
+  <Item id="87" value="Peronismo para la Victoria[ABSTENCION]"/>
+  <Item id="88" value="Peronismo para la Victoria[AUSENTE]"/>
+  <Item id="89" value="Peronismo para la Victoria[EMPATE]"/>
+  <Item id="90" value="Peronismo para la Victoria[NEGATIVO]"/>
+  <Item id="91" value="Peronismo para la Victoria[POSITIVO]"/>
+  <Item id="92" value="Primero Argentina[ABSTENCION]"/>
+  <Item id="93" value="Primero Argentina[AUSENTE]"/>
+  <Item id="94" value="Primero Argentina[NEGATIVO]"/>
+  <Item id="95" value="Primero Argentina[POSITIVO]"/>
+  <Item id="96" value="PRO[NEGATIVO]"/>
+  <Item id="97" value="PRO[POSITIVO]"/>
+  <Item id="98" value="PTS - Frente de Izquierda[ABSTENCION]"/>
+  <Item id="99" value="PTS - Frente de Izquierda[AUSENTE]"/>
+  <Item id="100" value="PTS - Frente de Izquierda[EMPATE]"/>
+  <Item id="101" value="PTS - Frente de Izquierda[NEGATIVO]"/>
+  <Item id="102" value="PTS - Frente de Izquierda[POSITIVO]"/>
+  <Item id="103" value="Salta Somos Todos[AUSENTE]"/>
+  <Item id="104" value="Salta Somos Todos[NEGATIVO]"/>
+  <Item id="105" value="Salta Somos Todos[POSITIVO]"/>
+  <Item id="106" value="Somos Mendoza[ABSTENCION]"/>
+  <Item id="107" value="Somos Mendoza[AUSENTE]"/>
+  <Item id="108" value="Somos Mendoza[NEGATIVO]"/>
+  <Item id="109" value="Somos Mendoza[POSITIVO]"/>
+  <Item id="110" value="Somos San Juan[ABSTENCION]"/>
+  <Item id="111" value="Somos San Juan[AUSENTE]"/>
+  <Item id="112" value="Somos San Juan[NEGATIVO]"/>
+  <Item id="113" value="Somos San Juan[POSITIVO]"/>
+  <Item id="114" value="Todos Juntos por San Juan[ABSTENCION]"/>
+  <Item id="115" value="Todos Juntos por San Juan[AUSENTE]"/>
+  <Item id="116" value="Todos Juntos por San Juan[NEGATIVO]"/>
+  <Item id="117" value="Todos Juntos por San Juan[POSITIVO]"/>
+  <Item id="118" value="Trabajo y Dignidad[ABSTENCION]"/>
+  <Item id="119" value="Trabajo y Dignidad[AUSENTE]"/>
+  <Item id="120" value="Trabajo y Dignidad[NEGATIVO]"/>
+  <Item id="121" value="Trabajo y Dignidad[POSITIVO]"/>
+  <Item id="122" value="Unidad Justicialista[ABSTENCION]"/>
+  <Item id="123" value="Unidad Justicialista[AUSENTE]"/>
+  <Item id="124" value="Unidad Justicialista[EMPATE]"/>
+  <Item id="125" value="Unidad Justicialista[NEGATIVO]"/>
+  <Item id="126" value="Unidad Justicialista[POSITIVO]"/>
+  <Item id="127" value="Union Civica Radical[NEGATIVO]"/>
+  <Item id="128" value="Union Civica Radical[POSITIVO]"/>
+  <Itemset id="1" numberOfItems="2">
+   <ItemRef itemRef="66"/>
+   <ItemRef itemRef="91"/>
+  </Itemset>
+  <Itemset id="2" numberOfItems="1">
+   <ItemRef itemRef="109"/>
+  </Itemset>
+  <Itemset id="3" numberOfItems="1">
+   <ItemRef itemRef="126"/>
+  </Itemset>
+  <Itemset id="4" numberOfItems="1">
+   <ItemRef itemRef="28"/>
+  </Itemset>
+  <Itemset id="5" numberOfItems="1">
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="6" numberOfItems="1">
+   <ItemRef itemRef="113"/>
+  </Itemset>
+  <Itemset id="7" numberOfItems="1">
+   <ItemRef itemRef="45"/>
+  </Itemset>
+  <Itemset id="8" numberOfItems="1">
+   <ItemRef itemRef="33"/>
+  </Itemset>
+  <Itemset id="9" numberOfItems="1">
+   <ItemRef itemRef="80"/>
+  </Itemset>
+  <AssociationRule support="0.361111111111111" confidence="0.896551724137931" lift="1.37344093910492" antecedent="1" consequent="2"/>
+  <AssociationRule support="0.375" confidence="0.931034482758621" lift="1.36805066854328" antecedent="1" consequent="3"/>
+  <AssociationRule support="0.361111111111111" confidence="0.896551724137931" lift="1.21795705920625" antecedent="1" consequent="4"/>
+  <AssociationRule support="0.361111111111111" confidence="0.896551724137931" lift="1.17366771159875" antecedent="1" consequent="5"/>
+  <AssociationRule support="0.375" confidence="0.931034482758621" lift="1.19704433497537" antecedent="1" consequent="6"/>
+  <AssociationRule support="0.375" confidence="0.931034482758621" lift="1.13617767387493" antecedent="1" consequent="7"/>
+  <AssociationRule support="0.375" confidence="0.931034482758621" lift="1.09892594686263" antecedent="1" consequent="8"/>
+  <AssociationRule support="0.388888888888889" confidence="0.96551724137931" lift="1.05329153605016" antecedent="1" consequent="9"/>
+ </AssociationModel>
+</PMML>

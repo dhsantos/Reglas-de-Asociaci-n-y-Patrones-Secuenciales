@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2018 diego" description="arules association rules model">
+  <Extension name="user" value="diego" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2018-10-07 15:17:25</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="2">
+  <DataField name="transaction" optype="categorical" dataType="string"/>
+  <DataField name="item" optype="categorical" dataType="string"/>
+ </DataDictionary>
+ <AssociationModel functionName="associationRules" numberOfTransactions="72" numberOfItems="128" minimumSupport="0.65" minimumConfidence="0.8" numberOfItemsets="49" numberOfRules="92">
+  <MiningSchema>
+   <MiningField name="transaction" usageType="group"/>
+   <MiningField name="item" usageType="active"/>
+  </MiningSchema>
+  <Item id="1" value="Coalicion Civica[AUSENTE]"/>
+  <Item id="2" value="Coalicion Civica[NEGATIVO]"/>
+  <Item id="3" value="Coalicion Civica[POSITIVO]"/>
+  <Item id="4" value="Concertacion FORJA[ABSTENCION]"/>
+  <Item id="5" value="Concertacion FORJA[AUSENTE]"/>
+  <Item id="6" value="Concertacion FORJA[NEGATIVO]"/>
+  <Item id="7" value="Concertacion FORJA[POSITIVO]"/>
+  <Item id="8" value="Cordoba Federal[AUSENTE]"/>
+  <Item id="9" value="Cordoba Federal[EMPATE]"/>
+  <Item id="10" value="Cordoba Federal[NEGATIVO]"/>
+  <Item id="11" value="Cordoba Federal[POSITIVO]"/>
+  <Item id="12" value="Cordoba Trabajo y Produccion[ABSTENCION]"/>
+  <Item id="13" value="Cordoba Trabajo y Produccion[AUSENTE]"/>
+  <Item id="14" value="Cordoba Trabajo y Produccion[NEGATIVO]"/>
+  <Item id="15" value="Cordoba Trabajo y Produccion[POSITIVO]"/>
+  <Item id="16" value="Cultura Educacion y Trabajo[ABSTENCION]"/>
+  <Item id="17" value="Cultura Educacion y Trabajo[AUSENTE]"/>
+  <Item id="18" value="Cultura Educacion y Trabajo[NEGATIVO]"/>
+  <Item id="19" value="Cultura Educacion y Trabajo[POSITIVO]"/>
+  <Item id="20" value="Elijo Catamarca[AUSENTE]"/>
+  <Item id="21" value="Elijo Catamarca[EMPATE]"/>
+  <Item id="22" value="Elijo Catamarca[NEGATIVO]"/>
+  <Item id="23" value="Elijo Catamarca[POSITIVO]"/>
+  <Item id="24" value="Evolucion Radical[ABSTENCION]"/>
+  <Item id="25" value="Evolucion Radical[AUSENTE]"/>
+  <Item id="26" value="Evolucion Radical[EMPATE]"/>
+  <Item id="27" value="Evolucion Radical[NEGATIVO]"/>
+  <Item id="28" value="Evolucion Radical[POSITIVO]"/>
+  <Item id="29" value="Federal Unidos por una Nueva Argentina[ABSTENCION]"/>
+  <Item id="30" value="Federal Unidos por una Nueva Argentina[AUSENTE]"/>
+  <Item id="31" value="Federal Unidos por una Nueva Argentina[EMPATE]"/>
+  <Item id="32" value="Federal Unidos por una Nueva Argentina[NEGATIVO]"/>
+  <Item id="33" value="Federal Unidos por una Nueva Argentina[POSITIVO]"/>
+  <Item id="34" value="Frente Civico por Santiago[AUSENTE]"/>
+  <Item id="35" value="Frente Civico por Santiago[EMPATE]"/>
+  <Item id="36" value="Frente Civico por Santiago[NEGATIVO]"/>
+  <Item id="37" value="Frente Civico por Santiago[POSITIVO]"/>
+  <Item id="38" value="Frente de la Concordia Misionero[AUSENTE]"/>
+  <Item id="39" value="Frente de la Concordia Misionero[EMPATE]"/>
+  <Item id="40" value="Frente de la Concordia Misionero[NEGATIVO]"/>
+  <Item id="41" value="Frente de la Concordia Misionero[POSITIVO]"/>
+  <Item id="42" value="Frente para la Victoria - PJ[ABSTENCION]"/>
+  <Item id="43" value="Frente para la Victoria - PJ[AUSENTE]"/>
+  <Item id="44" value="Frente para la Victoria - PJ[NEGATIVO]"/>
+  <Item id="45" value="Frente para la Victoria - PJ[POSITIVO]"/>
+  <Item id="46" value="Fte. Civico y Social de Catamarca[AUSENTE]"/>
+  <Item id="47" value="Fte. Civico y Social de Catamarca[NEGATIVO]"/>
+  <Item id="48" value="Fte. Civico y Social de Catamarca[POSITIVO]"/>
+  <Item id="49" value="Fte. de Izquierda y de los Trabajadores[ABSTENCION]"/>
+  <Item id="50" value="Fte. de Izquierda y de los Trabajadores[AUSENTE]"/>
+  <Item id="51" value="Fte. de Izquierda y de los Trabajadores[NEGATIVO]"/>
+  <Item id="52" value="Fte. de Izquierda y de los Trabajadores[POSITIVO]"/>
+  <Item id="53" value="Justicialista[ABSTENCION]"/>
+  <Item id="54" value="Justicialista[AUSENTE]"/>
+  <Item id="55" value="Justicialista[EMPATE]"/>
+  <Item id="56" value="Justicialista[NEGATIVO]"/>
+  <Item id="57" value="Justicialista por Tucuman[ABSTENCION]"/>
+  <Item id="58" value="Justicialista por Tucuman[AUSENTE]"/>
+  <Item id="59" value="Justicialista por Tucuman[EMPATE]"/>
+  <Item id="60" value="Justicialista por Tucuman[NEGATIVO]"/>
+  <Item id="61" value="Justicialista por Tucuman[POSITIVO]"/>
+  <Item id="62" value="Justicialista[POSITIVO]"/>
+  <Item id="63" value="Libres del Sur[ABSTENCION]"/>
+  <Item id="64" value="Libres del Sur[AUSENTE]"/>
+  <Item id="65" value="Libres del Sur[NEGATIVO]"/>
+  <Item id="66" value="Libres del Sur[POSITIVO]"/>
+  <Item id="67" value="Movimiento Popular Neuquino[AUSENTE]"/>
+  <Item id="68" value="Movimiento Popular Neuquino[NEGATIVO]"/>
+  <Item id="69" value="Movimiento Popular Neuquino[POSITIVO]"/>
+  <Item id="70" value="Nuevo Espacio Santafesino[ABSTENCION]"/>
+  <Item id="71" value="Nuevo Espacio Santafesino[AUSENTE]"/>
+  <Item id="72" value="Nuevo Espacio Santafesino[NEGATIVO]"/>
+  <Item id="73" value="Nuevo Espacio Santafesino[POSITIVO]"/>
+  <Item id="74" value="Partido Bloquista de San Juan[ABSTENCION]"/>
+  <Item id="75" value="Partido Bloquista de San Juan[AUSENTE]"/>
+  <Item id="76" value="Partido Bloquista de San Juan[NEGATIVO]"/>
+  <Item id="77" value="Partido Bloquista de San Juan[POSITIVO]"/>
+  <Item id="78" value="Partido Intransigente de Mendoza[ABSTENCION]"/>
+  <Item id="79" value="Partido Intransigente de Mendoza[NEGATIVO]"/>
+  <Item id="80" value="Partido Intransigente de Mendoza[POSITIVO]"/>
+  <Item id="81" value="Partido por la Justicia Social[AUSENTE]"/>
+  <Item id="82" value="Partido por la Justicia Social[NEGATIVO]"/>
+  <Item id="83" value="Partido por la Justicia Social[POSITIVO]"/>
+  <Item id="84" value="Partido Socialista[AUSENTE]"/>
+  <Item id="85" value="Partido Socialista[NEGATIVO]"/>
+  <Item id="86" value="Partido Socialista[POSITIVO]"/>
+  <Item id="87" value="Peronismo para la Victoria[ABSTENCION]"/>
+  <Item id="88" value="Peronismo para la Victoria[AUSENTE]"/>
+  <Item id="89" value="Peronismo para la Victoria[EMPATE]"/>
+  <Item id="90" value="Peronismo para la Victoria[NEGATIVO]"/>
+  <Item id="91" value="Peronismo para la Victoria[POSITIVO]"/>
+  <Item id="92" value="Primero Argentina[ABSTENCION]"/>
+  <Item id="93" value="Primero Argentina[AUSENTE]"/>
+  <Item id="94" value="Primero Argentina[NEGATIVO]"/>
+  <Item id="95" value="Primero Argentina[POSITIVO]"/>
+  <Item id="96" value="PRO[NEGATIVO]"/>
+  <Item id="97" value="PRO[POSITIVO]"/>
+  <Item id="98" value="PTS - Frente de Izquierda[ABSTENCION]"/>
+  <Item id="99" value="PTS - Frente de Izquierda[AUSENTE]"/>
+  <Item id="100" value="PTS - Frente de Izquierda[EMPATE]"/>
+  <Item id="101" value="PTS - Frente de Izquierda[NEGATIVO]"/>
+  <Item id="102" value="PTS - Frente de Izquierda[POSITIVO]"/>
+  <Item id="103" value="Salta Somos Todos[AUSENTE]"/>
+  <Item id="104" value="Salta Somos Todos[NEGATIVO]"/>
+  <Item id="105" value="Salta Somos Todos[POSITIVO]"/>
+  <Item id="106" value="Somos Mendoza[ABSTENCION]"/>
+  <Item id="107" value="Somos Mendoza[AUSENTE]"/>
+  <Item id="108" value="Somos Mendoza[NEGATIVO]"/>
+  <Item id="109" value="Somos Mendoza[POSITIVO]"/>
+  <Item id="110" value="Somos San Juan[ABSTENCION]"/>
+  <Item id="111" value="Somos San Juan[AUSENTE]"/>
+  <Item id="112" value="Somos San Juan[NEGATIVO]"/>
+  <Item id="113" value="Somos San Juan[POSITIVO]"/>
+  <Item id="114" value="Todos Juntos por San Juan[ABSTENCION]"/>
+  <Item id="115" value="Todos Juntos por San Juan[AUSENTE]"/>
+  <Item id="116" value="Todos Juntos por San Juan[NEGATIVO]"/>
+  <Item id="117" value="Todos Juntos por San Juan[POSITIVO]"/>
+  <Item id="118" value="Trabajo y Dignidad[ABSTENCION]"/>
+  <Item id="119" value="Trabajo y Dignidad[AUSENTE]"/>
+  <Item id="120" value="Trabajo y Dignidad[NEGATIVO]"/>
+  <Item id="121" value="Trabajo y Dignidad[POSITIVO]"/>
+  <Item id="122" value="Unidad Justicialista[ABSTENCION]"/>
+  <Item id="123" value="Unidad Justicialista[AUSENTE]"/>
+  <Item id="124" value="Unidad Justicialista[EMPATE]"/>
+  <Item id="125" value="Unidad Justicialista[NEGATIVO]"/>
+  <Item id="126" value="Unidad Justicialista[POSITIVO]"/>
+  <Item id="127" value="Union Civica Radical[NEGATIVO]"/>
+  <Item id="128" value="Union Civica Radical[POSITIVO]"/>
+  <Itemset id="1" numberOfItems="1">
+   <ItemRef itemRef="77"/>
+  </Itemset>
+  <Itemset id="2" numberOfItems="1">
+   <ItemRef itemRef="126"/>
+  </Itemset>
+  <Itemset id="3" numberOfItems="1">
+   <ItemRef itemRef="7"/>
+  </Itemset>
+  <Itemset id="4" numberOfItems="1">
+   <ItemRef itemRef="28"/>
+  </Itemset>
+  <Itemset id="5" numberOfItems="1">
+   <ItemRef itemRef="41"/>
+  </Itemset>
+  <Itemset id="6" numberOfItems="1">
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="7" numberOfItems="1">
+   <ItemRef itemRef="113"/>
+  </Itemset>
+  <Itemset id="8" numberOfItems="1">
+   <ItemRef itemRef="117"/>
+  </Itemset>
+  <Itemset id="9" numberOfItems="1">
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="10" numberOfItems="1">
+   <ItemRef itemRef="45"/>
+  </Itemset>
+  <Itemset id="11" numberOfItems="1">
+   <ItemRef itemRef="62"/>
+  </Itemset>
+  <Itemset id="12" numberOfItems="1">
+   <ItemRef itemRef="33"/>
+  </Itemset>
+  <Itemset id="13" numberOfItems="2">
+   <ItemRef itemRef="7"/>
+   <ItemRef itemRef="45"/>
+  </Itemset>
+  <Itemset id="14" numberOfItems="2">
+   <ItemRef itemRef="7"/>
+   <ItemRef itemRef="33"/>
+  </Itemset>
+  <Itemset id="15" numberOfItems="2">
+   <ItemRef itemRef="41"/>
+   <ItemRef itemRef="117"/>
+  </Itemset>
+  <Itemset id="16" numberOfItems="2">
+   <ItemRef itemRef="41"/>
+   <ItemRef itemRef="62"/>
+  </Itemset>
+  <Itemset id="17" numberOfItems="2">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="41"/>
+  </Itemset>
+  <Itemset id="18" numberOfItems="2">
+   <ItemRef itemRef="86"/>
+   <ItemRef itemRef="113"/>
+  </Itemset>
+  <Itemset id="19" numberOfItems="2">
+   <ItemRef itemRef="86"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="20" numberOfItems="2">
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="21" numberOfItems="2">
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="22" numberOfItems="2">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="23" numberOfItems="2">
+   <ItemRef itemRef="113"/>
+   <ItemRef itemRef="117"/>
+  </Itemset>
+  <Itemset id="24" numberOfItems="2">
+   <ItemRef itemRef="113"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="25" numberOfItems="2">
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="113"/>
+  </Itemset>
+  <Itemset id="26" numberOfItems="2">
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="113"/>
+  </Itemset>
+  <Itemset id="27" numberOfItems="2">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="113"/>
+  </Itemset>
+  <Itemset id="28" numberOfItems="2">
+   <ItemRef itemRef="117"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="29" numberOfItems="2">
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="117"/>
+  </Itemset>
+  <Itemset id="30" numberOfItems="2">
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="117"/>
+  </Itemset>
+  <Itemset id="31" numberOfItems="2">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="117"/>
+  </Itemset>
+  <Itemset id="32" numberOfItems="2">
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="33" numberOfItems="2">
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="34" numberOfItems="2">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="35" numberOfItems="2">
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="62"/>
+  </Itemset>
+  <Itemset id="36" numberOfItems="2">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="45"/>
+  </Itemset>
+  <Itemset id="37" numberOfItems="2">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="62"/>
+  </Itemset>
+  <Itemset id="38" numberOfItems="3">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="86"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="39" numberOfItems="3">
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="40" numberOfItems="3">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="41" numberOfItems="3">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="86"/>
+  </Itemset>
+  <Itemset id="42" numberOfItems="3">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="113"/>
+  </Itemset>
+  <Itemset id="43" numberOfItems="3">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="117"/>
+  </Itemset>
+  <Itemset id="44" numberOfItems="3">
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="45" numberOfItems="3">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="46" numberOfItems="3">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="47" numberOfItems="3">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="62"/>
+  </Itemset>
+  <Itemset id="48" numberOfItems="4">
+   <ItemRef itemRef="33"/>
+   <ItemRef itemRef="45"/>
+   <ItemRef itemRef="62"/>
+   <ItemRef itemRef="121"/>
+  </Itemset>
+  <Itemset id="49" numberOfItems="1">
+   <ItemRef itemRef="80"/>
+  </Itemset>
+  <AssociationRule support="0.652777777777778" confidence="0.979166666666667" lift="1.06818181818182" antecedent="1" consequent="49"/>
+  <AssociationRule support="0.666666666666667" confidence="0.979591836734694" lift="1.06864564007421" antecedent="2" consequent="49"/>
+  <AssociationRule support="0.680555555555556" confidence="0.98" lift="1.19593220338983" antecedent="3" consequent="10"/>
+  <AssociationRule support="0.666666666666667" confidence="0.96" lift="1.13311475409836" antecedent="3" consequent="12"/>
+  <AssociationRule support="0.680555555555556" confidence="0.98" lift="1.06909090909091" antecedent="3" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.886792452830189" lift="1.0467058459635" antecedent="4" consequent="12"/>
+  <AssociationRule support="0.708333333333333" confidence="0.962264150943396" lift="1.04974271012007" antecedent="4" consequent="49"/>
+  <AssociationRule support="0.680555555555556" confidence="0.907407407407407" lift="1.1264367816092" antecedent="5" consequent="8"/>
+  <AssociationRule support="0.708333333333333" confidence="0.944444444444444" lift="1.13333333333333" antecedent="5" consequent="11"/>
+  <AssociationRule support="0.694444444444444" confidence="0.925925925925926" lift="1.09289617486339" antecedent="5" consequent="12"/>
+  <AssociationRule support="0.736111111111111" confidence="0.981481481481482" lift="1.07070707070707" antecedent="5" consequent="49"/>
+  <AssociationRule support="0.666666666666667" confidence="0.872727272727273" lift="1.12207792207792" antecedent="6" consequent="7"/>
+  <AssociationRule support="0.680555555555556" confidence="0.890909090909091" lift="1.10595611285266" antecedent="6" consequent="9"/>
+  <AssociationRule support="0.708333333333333" confidence="0.927272727272727" lift="1.13158705701079" antecedent="6" consequent="10"/>
+  <AssociationRule support="0.680555555555556" confidence="0.890909090909091" lift="1.06909090909091" antecedent="6" consequent="11"/>
+  <AssociationRule support="0.736111111111111" confidence="0.963636363636364" lift="1.13740685543964" antecedent="6" consequent="12"/>
+  <AssociationRule support="0.722222222222222" confidence="0.945454545454545" lift="1.03140495867769" antecedent="6" consequent="49"/>
+  <AssociationRule support="0.708333333333333" confidence="0.910714285714286" lift="1.13054187192118" antecedent="7" consequent="8"/>
+  <AssociationRule support="0.694444444444444" confidence="0.892857142857143" lift="1.10837438423645" antecedent="7" consequent="9"/>
+  <AssociationRule support="0.666666666666667" confidence="0.857142857142857" lift="1.04600484261501" antecedent="7" consequent="10"/>
+  <AssociationRule support="0.680555555555556" confidence="0.875" lift="1.05" antecedent="7" consequent="11"/>
+  <AssociationRule support="0.736111111111111" confidence="0.946428571428571" lift="1.11709601873536" antecedent="7" consequent="12"/>
+  <AssociationRule support="0.736111111111111" confidence="0.946428571428571" lift="1.03246753246753" antecedent="7" consequent="49"/>
+  <AssociationRule support="0.680555555555556" confidence="0.844827586206897" lift="1.0487514863258" antecedent="8" consequent="9"/>
+  <AssociationRule support="0.652777777777778" confidence="0.810344827586207" lift="0.988895382817066" antecedent="8" consequent="10"/>
+  <AssociationRule support="0.722222222222222" confidence="0.896551724137931" lift="1.07586206896552" antecedent="8" consequent="11"/>
+  <AssociationRule support="0.722222222222222" confidence="0.896551724137931" lift="1.05822498586772" antecedent="8" consequent="12"/>
+  <AssociationRule support="0.777777777777778" confidence="0.96551724137931" lift="1.05329153605016" antecedent="8" consequent="49"/>
+  <AssociationRule support="0.708333333333333" confidence="0.879310344827586" lift="1.07305669199299" antecedent="9" consequent="10"/>
+  <AssociationRule support="0.694444444444444" confidence="0.862068965517241" lift="1.03448275862069" antecedent="9" consequent="11"/>
+  <AssociationRule support="0.791666666666667" confidence="0.982758620689655" lift="1.159977388355" antecedent="9" consequent="12"/>
+  <AssociationRule support="0.763888888888889" confidence="0.948275862068966" lift="1.03448275862069" antecedent="9" consequent="49"/>
+  <AssociationRule support="0.736111111111111" confidence="0.898305084745763" lift="1.07796610169492" antecedent="10" consequent="11"/>
+  <AssociationRule support="0.763888888888889" confidence="0.932203389830508" lift="1.10030564045568" antecedent="10" consequent="12"/>
+  <AssociationRule support="0.777777777777778" confidence="0.949152542372881" lift="1.03543913713405" antecedent="10" consequent="49"/>
+  <AssociationRule support="0.75" confidence="0.9" lift="1.06229508196721" antecedent="11" consequent="12"/>
+  <AssociationRule support="0.819444444444444" confidence="0.983333333333333" lift="1.07272727272727" antecedent="11" consequent="49"/>
+  <AssociationRule support="0.805555555555556" confidence="0.950819672131147" lift="1.03725782414307" antecedent="12" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.959183673469388" lift="1.1321512211442" antecedent="13" consequent="12"/>
+  <AssociationRule support="0.666666666666667" confidence="0.979591836734694" lift="1.06864564007421" antecedent="13" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.979166666666667" lift="1.06818181818182" antecedent="14" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.959183673469388" lift="1.15102040816327" antecedent="15" consequent="11"/>
+  <AssociationRule support="0.666666666666667" confidence="0.979591836734694" lift="1.06864564007421" antecedent="15" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.92156862745098" lift="1.0877531340405" antecedent="16" consequent="12"/>
+  <AssociationRule support="0.694444444444444" confidence="0.980392156862745" lift="1.06951871657754" antecedent="16" consequent="49"/>
+  <AssociationRule support="0.680555555555556" confidence="0.98" lift="1.06909090909091" antecedent="17" consequent="49"/>
+  <AssociationRule support="0.666666666666667" confidence="1" lift="1.18032786885246" antecedent="18" consequent="12"/>
+  <AssociationRule support="0.680555555555556" confidence="1" lift="1.18032786885246" antecedent="19" consequent="12"/>
+  <AssociationRule support="0.652777777777778" confidence="0.959183673469388" lift="1.04638218923933" antecedent="19" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.92156862745098" lift="1.10588235294118" antecedent="20" consequent="11"/>
+  <AssociationRule support="0.680555555555556" confidence="0.96078431372549" lift="1.13404050144648" antecedent="20" consequent="12"/>
+  <AssociationRule support="0.680555555555556" confidence="0.96078431372549" lift="1.04812834224599" antecedent="20" consequent="49"/>
+  <AssociationRule support="0.666666666666667" confidence="0.979591836734694" lift="1.15623954499833" antecedent="21" consequent="12"/>
+  <AssociationRule support="0.680555555555556" confidence="1" lift="1.09090909090909" antecedent="21" consequent="49"/>
+  <AssociationRule support="0.708333333333333" confidence="0.962264150943396" lift="1.04974271012007" antecedent="22" consequent="49"/>
+  <AssociationRule support="0.666666666666667" confidence="0.941176470588235" lift="1.11089681774349" antecedent="23" consequent="12"/>
+  <AssociationRule support="0.680555555555556" confidence="0.96078431372549" lift="1.04812834224599" antecedent="23" consequent="49"/>
+  <AssociationRule support="0.680555555555556" confidence="0.98" lift="1.15672131147541" antecedent="24" consequent="12"/>
+  <AssociationRule support="0.652777777777778" confidence="0.94" lift="1.02545454545455" antecedent="24" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.979166666666667" lift="1.15573770491803" antecedent="25" consequent="12"/>
+  <AssociationRule support="0.652777777777778" confidence="0.979166666666667" lift="1.06818181818182" antecedent="25" consequent="49"/>
+  <AssociationRule support="0.666666666666667" confidence="0.979591836734694" lift="1.15623954499833" antecedent="26" consequent="12"/>
+  <AssociationRule support="0.666666666666667" confidence="0.979591836734694" lift="1.06864564007421" antecedent="26" consequent="49"/>
+  <AssociationRule support="0.694444444444444" confidence="0.943396226415094" lift="1.02915951972556" antecedent="27" consequent="49"/>
+  <AssociationRule support="0.666666666666667" confidence="0.979591836734694" lift="1.15623954499833" antecedent="28" consequent="12"/>
+  <AssociationRule support="0.652777777777778" confidence="0.959183673469388" lift="1.04638218923933" antecedent="28" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="1" lift="1.09090909090909" antecedent="29" consequent="49"/>
+  <AssociationRule support="0.666666666666667" confidence="0.923076923076923" lift="1.08953341740227" antecedent="30" consequent="12"/>
+  <AssociationRule support="0.708333333333333" confidence="0.980769230769231" lift="1.06993006993007" antecedent="30" consequent="49"/>
+  <AssociationRule support="0.694444444444444" confidence="0.961538461538462" lift="1.04895104895105" antecedent="31" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.92156862745098" lift="1.10588235294118" antecedent="32" consequent="11"/>
+  <AssociationRule support="0.708333333333333" confidence="1" lift="1.18032786885246" antecedent="32" consequent="12"/>
+  <AssociationRule support="0.694444444444444" confidence="0.980392156862745" lift="1.06951871657754" antecedent="32" consequent="49"/>
+  <AssociationRule support="0.694444444444444" confidence="1" lift="1.18032786885246" antecedent="33" consequent="12"/>
+  <AssociationRule support="0.680555555555556" confidence="0.98" lift="1.06909090909091" antecedent="33" consequent="49"/>
+  <AssociationRule support="0.75" confidence="0.947368421052632" lift="1.03349282296651" antecedent="34" consequent="49"/>
+  <AssociationRule support="0.708333333333333" confidence="0.962264150943396" lift="1.13578719455614" antecedent="35" consequent="12"/>
+  <AssociationRule support="0.736111111111111" confidence="1" lift="1.09090909090909" antecedent="35" consequent="49"/>
+  <AssociationRule support="0.75" confidence="0.981818181818182" lift="1.07107438016529" antecedent="36" consequent="49"/>
+  <AssociationRule support="0.736111111111111" confidence="0.981481481481482" lift="1.07070707070707" antecedent="37" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.959183673469388" lift="1.04638218923933" antecedent="38" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="1" lift="1.09090909090909" antecedent="39" consequent="49"/>
+  <AssociationRule support="0.666666666666667" confidence="0.979591836734694" lift="1.06864564007421" antecedent="40" consequent="49"/>
+  <AssociationRule support="0.666666666666667" confidence="1" lift="1.09090909090909" antecedent="41" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.979166666666667" lift="1.06818181818182" antecedent="42" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="0.979166666666667" lift="1.06818181818182" antecedent="43" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="1" lift="1.18032786885246" antecedent="44" consequent="12"/>
+  <AssociationRule support="0.652777777777778" confidence="1" lift="1.09090909090909" antecedent="44" consequent="49"/>
+  <AssociationRule support="0.694444444444444" confidence="0.980392156862745" lift="1.06951871657754" antecedent="45" consequent="49"/>
+  <AssociationRule support="0.680555555555556" confidence="0.98" lift="1.06909090909091" antecedent="46" consequent="49"/>
+  <AssociationRule support="0.708333333333333" confidence="1" lift="1.09090909090909" antecedent="47" consequent="49"/>
+  <AssociationRule support="0.652777777777778" confidence="1" lift="1.09090909090909" antecedent="48" consequent="49"/>
+ </AssociationModel>
+</PMML>

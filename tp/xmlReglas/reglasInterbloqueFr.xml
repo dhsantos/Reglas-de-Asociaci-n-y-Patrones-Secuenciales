@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2018 diego" description="arules association rules model">
+  <Extension name="user" value="diego" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2018-10-08 03:59:23</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="2">
+  <DataField name="transaction" optype="categorical" dataType="string"/>
+  <DataField name="item" optype="categorical" dataType="string"/>
+ </DataDictionary>
+ <AssociationModel functionName="associationRules" numberOfTransactions="72" numberOfItems="17" minimumSupport="0.1" minimumConfidence="0.8" numberOfItemsets="3" numberOfRules="2">
+  <MiningSchema>
+   <MiningField name="transaction" usageType="group"/>
+   <MiningField name="item" usageType="active"/>
+  </MiningSchema>
+  <Item id="1" value="Cordoba Trabajo y Produccion[ABSTENCION]"/>
+  <Item id="2" value="Cordoba Trabajo y Produccion[AUSENTE]"/>
+  <Item id="3" value="Cordoba Trabajo y Produccion[NEGATIVO]"/>
+  <Item id="4" value="Cordoba Trabajo y Produccion[POSITIVO]"/>
+  <Item id="5" value="Cultura Educacion y Trabajo[ABSTENCION]"/>
+  <Item id="6" value="Cultura Educacion y Trabajo[AUSENTE]"/>
+  <Item id="7" value="Cultura Educacion y Trabajo[NEGATIVO]"/>
+  <Item id="8" value="Cultura Educacion y Trabajo[POSITIVO]"/>
+  <Item id="9" value="Federal Unidos por una Nueva Argentina[ABSTENCION]"/>
+  <Item id="10" value="Federal Unidos por una Nueva Argentina[AUSENTE]"/>
+  <Item id="11" value="Federal Unidos por una Nueva Argentina[EMPATE]"/>
+  <Item id="12" value="Federal Unidos por una Nueva Argentina[NEGATIVO]"/>
+  <Item id="13" value="Federal Unidos por una Nueva Argentina[POSITIVO]"/>
+  <Item id="14" value="Trabajo y Dignidad[ABSTENCION]"/>
+  <Item id="15" value="Trabajo y Dignidad[AUSENTE]"/>
+  <Item id="16" value="Trabajo y Dignidad[NEGATIVO]"/>
+  <Item id="17" value="Trabajo y Dignidad[POSITIVO]"/>
+  <Itemset id="1" numberOfItems="3">
+   <ItemRef itemRef="2"/>
+   <ItemRef itemRef="6"/>
+   <ItemRef itemRef="17"/>
+  </Itemset>
+  <Itemset id="2" numberOfItems="3">
+   <ItemRef itemRef="4"/>
+   <ItemRef itemRef="8"/>
+   <ItemRef itemRef="17"/>
+  </Itemset>
+  <Itemset id="3" numberOfItems="1">
+   <ItemRef itemRef="13"/>
+  </Itemset>
+  <AssociationRule support="0.25" confidence="0.947368421052632" lift="1.11820534943917" antecedent="1" consequent="3"/>
+  <AssociationRule support="0.458333333333333" confidence="1" lift="1.18032786885246" antecedent="2" consequent="3"/>
+ </AssociationModel>
+</PMML>
